@@ -203,7 +203,7 @@ Poznając ten prosty język zobaczycie jak wiele zagadnień staje się bardziej 
                         <section class="slide" id="9">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="naruszenie-lisp-i-srp">Naruszenie LISP i SRP.</h2>
+<h2 id="naruszenie-lsp-i-srp">Naruszenie LSP i SRP.</h2>
 
 <h4 id="przykad-i">Przykład I</h4>
 <pre><code>Ksiądz, normalnie dobry i uczciwy, niestety z czasem łasuch kościelnej tacy (złodziej). W rzeczywistości ten sam obiekt ma dwie odmienne funkcje. W kodzie nie łamiąc SRP było by nie możliwe stworzenie klasy która jest księdzem i złodziejem w jednym.  
@@ -219,7 +219,7 @@ Poznając ten prosty język zobaczycie jak wiele zagadnień staje się bardziej 
                         <section class="slide" id="10">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="naruszenie-lisp-cd">Naruszenie LISP cd.</h2>
+<h2 id="naruszenie-lsp-cd">Naruszenie LSP cd.</h2>
 <pre class="code">
 def client_of_rectangle(rectangle)
     rectangle.width = 5;
@@ -393,32 +393,29 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 <h2 id="ladami-rubiego-w-javascript---mixinjs-1">Śladami rubiego w javascript - Mixin.js.</h2>
 <p>Przykład zmiksowania w javscript:</p>
 
-<pre class="code">var printable = {
-    printToPdf: {
-      value: function()
+<pre id="code" name="code" class="code" mode="javascript" style="display: none;" runnable="true" >
+"use stric";
+var printable = {
+    printToPdf: function()
       {
         console.log("Text as pdf: " + this.details);
-      }
-    },
-    printToHtml: {
-      value: function()
+      },
+    printToHtml: function()
       {
         console.log("Text as html: " + this.details);
-      }
-    },
-    printToCsv: {
-      value: function(){
+      },
+    printToCsv: function(){
         console.log("Text as csv: " + this.details);
       }
-    }
   };
+    
   // Invoice maker like constructor but without "new".
   var invoiceMaker = function()
   {
     var _details;
     var _proto = {};
     Object.defineProperties(_proto, printable);
-    var _that = Object.create(_proto);
+    var _that = Object.create(printable);
   
     _that.details = _details;
     
@@ -459,7 +456,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
                         <section class="slide" id="19">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="gadu-gadu-ale-jak-to-si-ma-do-srp-czy-lisp">Gadu gadu ale jak to się ma do SRP czy LISP?</h2>
+<h2 id="gadu-gadu-ale-jak-to-si-ma-do-srp-czy-lsp">Gadu gadu ale jak to się ma do SRP czy LSP?</h2>
 
 <h3 id="dobra-delegacja-zamiast-dziedziczenia-lekarstwem-na-srp">Dobra delegacja zamiast dziedziczenia lekarstwem na SRP.</h3>
 <p>Mixin w rubim czy javscript wydaje się radzić super jeśli chodzi o zasady DRY czy SRP. Ponad to jest prosty i zgodny z naturą obu języków.</p>

@@ -107,7 +107,7 @@ Od wielu już lat poprzez takie języki jak C++, java, C# czy nawet Ruby główn
 
 !SLIDE
 
-## Naruszenie LISP i SRP.
+## Naruszenie LSP i SRP.
 
 #### Przykład I
     Ksiądz, normalnie dobry i uczciwy, niestety z czasem łasuch kościelnej tacy (złodziej). W rzeczywistości ten sam obiekt ma dwie odmienne funkcje. W kodzie nie łamiąc SRP było by nie możliwe stworzenie klasy która jest księdzem i złodziejem w jednym.  
@@ -117,7 +117,7 @@ Od wielu już lat poprzez takie języki jak C++, java, C# czy nawet Ruby główn
 
 !SLIDE
 
-## Naruszenie LISP cd.
+## Naruszenie LSP cd.
 {{{
 def client_of_rectangle(rectangle)
     rectangle.width = 5;
@@ -308,7 +308,7 @@ Generalnie jeden kod i drugi robi to samo - deleguje pewne cechy do obiektów, d
 
 !SLIDE
 
-## Gadu gadu ale jak to się ma do SRP czy LISP?
+## Gadu gadu ale jak to się ma do SRP czy LSP?
 
 ### Dobra delegacja zamiast dziedziczenia lekarstwem na SRP.
 Mixin w rubim czy javscript wydaje się radzić super jeśli chodzi o zasady DRY czy SRP. Ponad to jest prosty i zgodny z naturą obu języków.
