@@ -1,0 +1,40 @@
+% vi: ft=viki:tw=110
+
+[-old_body_young_soul_raw-]
+
+    Spis puntków do prezentacji:
+        1. Wyjasnienie tytulu dobre zle cechy.
+        2. Cos sie tak uparl na javscript.
+            - pare miesiecy temu, co zrobic aby przyblizyc js ludzia ktorzy maja z nim stycznosc.
+            - mozna opowiedziec i pozostawic wole nauki sluchaczowi
+            - programisci maja cos takie ze ciezko zmienia sie im zdania na jakis temat
+            - niechetnie podchadza do nowych innych spojrzen, tym bardziej na javascript.
+            - dlatego wiedziac z jak doswiadczonymi chce zebysc cie sie uczyli zeby pisac dobry kod ale po to
+              ...
+            - tak jak zabawka do nauki tabliczki mnozenia.
+        3.  Cel przentacji
+        4.  jak to uczinic odwolac sie do doswiadczenia ...
+        5.  Js jest prostym jezykiem.
+                - przyklad prostego tworzenia obiektow
+        6.  Jak tworzym obiekty w innych jezykach
+        7.  Wady takiego podjscia
+        8.  czy da sie zrobic to bez klas - odwalajmy sie do to tego po co siegali tworcy obiektowek.
+            Naturalnosc
+        9.  Wzorzec prototype.
+        10. Jak to wyglada w odniesienie do obiketowki
+            - masz mozliwosc meta tuck typing
+            - zamias kals abstrakcyjnych proste modele domenowa, a jak koniecznie potrzebujemy abstrakcji to
+              nazwyimy juz ja zgoneie z domena. np. Persnonable not Person.
+        11. Delegacja zamiast dziedziczenia lekarstwem na DRY.
+        12. Proste
+        13. mixin.js
+        14. Mixin ma swoje wady
+        15. js dzieki takiemu sposobowi tworzenia obiektow umozliwia w prosty sposob podmiane takich rol bez
+            przy zachowanu srp ktore tyczy sie kodu fizycznie a nie miejsca w pamieci.
+        16. Nie twierdze ze nadaje sie do wszystkiego. Ale do modelowania domeny jak najabrdziej.
+     
+Examples/Touch cases:
+    * [[~/Documents/Articles/js/NonSeriesArticles/TouchCases/inherit_domain_from_tool]]
+
+
+
