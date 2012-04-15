@@ -144,9 +144,9 @@ I will try convince you to “use” this simply language as a <em>“excuse”<
   <li>from cryptic symbols to very <em>“plastic forms”</em>.</li>
 </ul>
 
-<p>Back to your childchood, try to remembered your first steps. Methods with many lines of codes, programs base one class, conditions almost looks like <a href="http://en.wikipedia.org/wiki/De_Morgan%27s_laws">De Morgan’s laws</a>.</p>
+<p>Back to your childchood, try to remembered your first steps. Methods with many lines of codes, programs base on one class, conditions almost looks like <a href="http://en.wikipedia.org/wiki/De_Morgan%27s_laws">De Morgan’s laws</a>.</p>
 
-<pre><code>Doświadczenia kilku pokoleń programistów uczą że im mniej coś skomplikowane tym lepiej.  
+<pre><code>We can learn from a few developers generations, that if somthing is less complicated than it is better.
 </code></pre>
 
 
@@ -155,15 +155,27 @@ I will try convince you to “use” this simply language as a <em>“excuse”<
                         <section class="slide" id="7">
                         <!-- _S9SLIDE_  -->
 
-<h3 id="javascript-jest-prostym-jzykiem">Javascript jest prostym językiem:</h3>
+<h2 id="javascript-is-simple">Javascript is simple!</h2>
 
 <ul>
-  <li>prosta struktura obiektu (na niem wzorowano <em>json</em>),</li>
-  <li>plastyczność - rozszerzalność,</li>
-  <li>luźne typowanie (duck typing),</li>
-  <li>lambda aka domknięcie aka <em>closur</em>,</li>
-  <li>brak klas,</li>
-  <li>tylko kilka typów wbudowanych.</li>
+  <li>
+    <h3 id="simple-object-literal-notation-json-is-subset-of-it">simple object literal notation (<em>json</em> is subset of it),</h3>
+  </li>
+  <li>
+    <h3 id="easy-to-form---easy-to-extend">easy to form - easy to extend,</h3>
+  </li>
+  <li>
+    <h3 id="duck-typing">duck typing,</h3>
+  </li>
+  <li>
+    <h3 id="closur-aka-block"><em>closur</em> aka block,</h3>
+  </li>
+  <li>
+    <h3 id="class-free">class free,</h3>
+  </li>
+  <li>
+    <h3 id="just-few-build-in-types---easy-to-learn">just few build in types - easy to learn.</h3>
+  </li>
 </ul>
 
 
@@ -172,20 +184,20 @@ I will try convince you to “use” this simply language as a <em>“excuse”<
                         <section class="slide" id="8">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="przykad-prostego-obiektu-je">Przykład prostego obiektu <em>jeż</em></h2>
+<h2 id="simple-object-example">Simple object example.</h2>
 
-<pre><code>var jez = {
-    waga: 100,
-    wiek: 7,
-    szybkosc: 10,
-    iloscJablekNaKolcach: 3,
-    oczy: piwne,
-    jedzTaKure: function() {},
-    dzgnijKolcem: function() {}
+<pre><code>var pussInBoots = {
+    weight: 11,
+    speed: 10,
+    numberOfMouseKilled: 3,
+    danceSkillLeve: "low",
+    eye: "very dark",
+    drinkWine: function() {},
+    takeOffBoots: function() {}
     };
 </code></pre>
 
-<h2 id="no-dobra-ale-jak-te-dane-czy-zachowanie-uwsplni-na-grup-obiektw">No dobra ale jak te dane czy zachowanie <em>uwspólnić</em> na grupę obiektów?</h2>
+<h2 id="nice-but-how-can-i-create-a-group-of-objects">Nice, but how can I create a group of objects.</h2>
 
 
                         </section>
@@ -193,23 +205,21 @@ I will try convince you to “use” this simply language as a <em>“excuse”<
                         <section class="slide" id="9">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="tak-radz-sobie-profesjonalici">Tak radzą sobie <em>“profesjonaliści”</em>!</h2>
+<h2 id="this-is-how-professionals-deal-with-it">This is how <em>“professionals”</em> deal with it!</h2>
 
-<h3 id="klasy">Klasy.</h3>
-<p>Od wielu już lat poprzez takie języki jak C++, java, C# czy nawet Ruby głównym sposobem tworzenia kolejnych instancji obiektów są klasy. </p>
+<h3 id="classs-world">Class’s World.</h3>
+<p>From many years, through such a languages like C++, Java, C# and even Ruby, the base way to create new object instance is <em>Class</em>.  </p>
 
-<h3 id="co-daj-nam-klasy">Co dają nam klasy:</h3>
+<h3 id="common-base-class-responsibility">Common base class responsibility:</h3>
 <ul>
-  <li>dają początek grupie obiektów,</li>
-  <li>miejsce na definiowania wspólnych cech grupy obiektów,</li>
+  <li>object creation,</li>
+  <li>place for common object behevior and data.</li>
 </ul>
 
-<h3 id="co-mog-ogranicza-przy-modelowaniu-domeny">Co mogą ograniczać przy modelowaniu <strong>domeny</strong>:</h3>
+<h3 id="common-class-problems-especially-in-business-logic-layer">Common class problems especially in business logic layer:</h3>
 <ul>
-  <li>źle rozumiany DRY może prowadzić do niewłaściwego dziedziczenia (klasa domenowa dziedziczy po narzędziowej),</li>
-  <li>mocne powiązania w relacji dziedziczenia klas często jest powodem naruszenia<br />
-<a href="http://en.wikipedia.org/wiki/Liskov_substitution_principle">Liskov substitution principle</a>,</li>
-  <li><em>dodatkowa abstrakcja</em></li>
+  <li>bad understand DRY principle goes to wrong class inheritnace (domain class inherit from tools class)</li>
+  <li>strong inheritnace relationship can very easy violates <a href="http://pragmaticcraftsman.com/2006/07/single-responsibility-principle/">SRP</a>, <a href="http://blog.objectmentor.com/articles/2008/09/06/the-liskov-substitution-principle-for-duck-typed-languages">LSP</a>.</li>
 </ul>
 
 
@@ -218,15 +228,17 @@ I will try convince you to “use” this simply language as a <em>“excuse”<
                         <section class="slide" id="10">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="naruszenie-lsp-i-srp">Naruszenie LSP i SRP.</h2>
-
-<h4 id="przykad-i">Przykład I</h4>
-<pre><code>Ksiądz, normalnie dobry i uczciwy, niestety z czasem łasuch kościelnej tacy (złodziej). W rzeczywistości ten sam obiekt ma dwie odmienne funkcje. W kodzie nie łamiąc SRP było by nie możliwe stworzenie klasy która jest księdzem i złodziejem w jednym.  
+<h2 id="novice-naive-example">Novice naive example.</h2>
+<pre><code>We have a domain class Invoice. Invoice have a lot of fields like total price, tax, payment date and few behaviours.
+  
+After some time our client request for pdf, html and csv invoice support. Some "guy" who may not understand very well DRY has found tool Printer which actually do all the work. He inherit Invoice from Printer. He think that this functionality comes for free. Everything works well, he is happy.
 </code></pre>
 
-<h4 id="przykad-ii">Przykład II</h4>
-<pre><code>Z matematycznego punktu widzenia każdy kwadrat jest prostokątem, dlatego z punktu widzenia geometrii kwadrat jak najbardziej dziedziczy po prostokącie. Co się jednak stanie kiedy nadpiszemy w kwadracie długość i szerokość tak aby wskazywały na jedno pole (jedno ramie kwadratu) i będziemy chcieli policzyć pole?
-</code></pre>
+<h3 id="however-he-violated-a-few-bases-rules-and-principles">However, he violated a few bases rules and principles:</h3>
+<ul>
+  <li>First of all he made dependency in his domain from much less important tool.</li>
+  <li>Violated SRP. Invoice now is effected by Printer class changes which can anforce Invoice to change with Printer.</li>
+</ul>
 
 
                         </section>
@@ -234,26 +246,52 @@ I will try convince you to “use” this simply language as a <em>“excuse”<
                         <section class="slide" id="11">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="naruszenie-lsp-cd">Naruszenie LSP cd.</h2>
-<pre class="code">
-def client_of_rectangle(rectangle)
-    rectangle.width = 5;
-    rectangle.height = 4;
-    raise "Bad area!" if rectangle.Area() != 20
-end
-client_of_rectangle(rectangle) \\ok
-client_of_rectangle(square) \\rais exeption
-</pre>
-<p>Kwadrat naruszył <em>“kontrakt”</em> klasy prostokąt. Problem w tym że nie naruszył samego kwadrata.</p>
+<h2 id="classic-shapes-example">Classic shapes example.</h2>
 
-<blockquote>
-  <p>The validity of a model can be expressed only in terms of its <strong>clients</strong>. </p>
-</blockquote>
+<p>It is well know example with shapes. Like square and rectangle and area calculation. I think just everybody knows those examples if not <a href="http://www.google.com/url?sa=t&amp;rct=j&amp;q=violate%20liskov%20substitution%20principle%20squer%20rectangle&amp;source=web&amp;cd=1&amp;ved=0CCQQFjAA&amp;url=http%3A%2F%2Fwww.objectmentor.com%2Fresources%2Farticles%2Flsp.pdf&amp;ei=8OGKT4PvOaOJ4gSa08mNCg&amp;usg=AFQjCNFnNI0DmzofjWDQEGILAT-W1L8Mtw&amp;cad=rja">see this</a> or <a href="http://www.amazon.co.uk/Principles-Patterns-Practices-Robert-Martin/dp/0131857258/ref=pd_rhf_se_p_t_1">read this</a>.</p>
+
+<pre><code>The idea behind "shapes examples" is that if you inherit and change base behaviours you can very easy violates contract between collaborator and his client. It is much more harder to see than violation from previous example because it can be see only in term of client. Not in isolation.
+</code></pre>
+
+<h3 id="its-violates-lsp-because-square-is-not-rectangle-in-client-of-calculate-rectangle-area">Its violates LSP because square is not rectangle in client of calculate rectangle area.</h3>
 
 
                         </section>
                     
                         <section class="slide" id="12">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="still-far-away-from-the-domain">Still far away from the domain.</h2>
+
+<h3 id="the-good-and-the-bad-example">The Good and the Bad example.</h3>
+
+<pre><code>Priest, particularly good and honest. He help poor people, give them food, cloths. He try to teach other how to live and not hurt anybody. However, when night comes, he become thief and still charities.  
+   
+In real World the same object (priest) can has many different behaviours "the good man" and "the bad man". In our code will be impossible to create class which contains behaviours for "the good" (priest) and the bad (thief) without violating SRP principle.
+</code></pre>
+
+
+                        </section>
+                    
+                        <section class="slide" id="13">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="problem">Problem.</h2>
+<ul>
+  <li>
+    <p>First of all class are not unique, the same violation of principles can be done with modules or functions. Maybe with classes it is much more easier maybe not.</p>
+  </li>
+  <li>
+    <p>The problem is that, OOP was create to close our code to domain. In this case in many languages classes have significant role. However, it seems to the same classes keep as still far away from domain.</p>
+  </li>
+</ul>
+
+<h3 id="maybe-it-is-time-to-look-at-object-in-different-way-besides-oop-is-about-objects-not-necessary-about-classes">Maybe it is time to look at object in different way? Besides OOP is about objects not necessary about classes.</h3>
+
+
+                        </section>
+                    
+                        <section class="slide" id="14">
                         <!-- _S9SLIDE_   -->
 
 <h2 id="ok-ale-czy-obiekt-moe-istnie-bez-klasy">Ok. Ale czy obiekt może istnieć bez klasy?</h2>
@@ -265,7 +303,7 @@ client_of_rectangle(square) \\rais exeption
 
                         </section>
                     
-                        <section class="slide" id="13">
+                        <section class="slide" id="15">
                         <!-- _S9SLIDE_   -->
 
 <h2 id="js-zaczyna-nabiera-kolorw">Js zaczyna nabierać kolorów.</h2>
@@ -286,7 +324,7 @@ client_of_rectangle(square) \\rais exeption
 
                         </section>
                     
-                        <section class="slide" id="14">
+                        <section class="slide" id="16">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="przykad-samochodu-jako-prototypu">Przykład <em>samochodu</em> jako prototypu.</h2>
@@ -296,7 +334,7 @@ client_of_rectangle(square) \\rais exeption
 
                         </section>
                     
-                        <section class="slide" id="15">
+                        <section class="slide" id="17">
                         <!-- _S9SLIDE_   -->
 
 <h2 id="przykad-samochodu---js">Przykład <em>samochodu</em> - js.</h2>
@@ -343,7 +381,7 @@ client_of_rectangle(square) \\rais exeption
 
                         </section>
                     
-                        <section class="slide" id="16">
+                        <section class="slide" id="18">
                         <!-- _S9SLIDE_   -->
 
 <h2 id="co-nam-to-wnosi">Co nam to wnosi?</h2>
@@ -365,7 +403,7 @@ client_of_rectangle(square) \\rais exeption
 
                         </section>
                     
-                        <section class="slide" id="17">
+                        <section class="slide" id="19">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="ladami-rubiego-w-javascript---mixinjs">Śladami rubiego w javascript - Mixin.js.</h2>
@@ -402,7 +440,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="18">
+                        <section class="slide" id="20">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="ladami-rubiego-w-javascript---mixinjs-1">Śladami rubiego w javascript - Mixin.js.</h2>
@@ -452,7 +490,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="19">
+                        <section class="slide" id="21">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="gdzie-jest-haczyk">Gdzie jest haczyk?</h2>
@@ -471,7 +509,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="20">
+                        <section class="slide" id="22">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="gadu-gadu-ale-jak-to-si-ma-do-srp-czy-lsp">Gadu gadu ale jak to się ma do SRP czy LSP?</h2>
@@ -487,7 +525,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="21">
+                        <section class="slide" id="23">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="warunkowa-zmiana-obiektw">Warunkowa zmiana obiektów.</h2>
@@ -504,7 +542,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="22">
+                        <section class="slide" id="24">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="podsumowanie">Podsumowanie.</h2>

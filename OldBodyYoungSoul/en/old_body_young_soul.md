@@ -65,79 +65,91 @@ We will see if javascript besides of its age and "body" is in step with mainstre
 * from machine code to languages close to domain, 
 * from cryptic symbols to very _"plastic forms"_.
     
-Back to your childchood, try to remembered your first steps. Methods with many lines of codes, programs base one class, conditions almost looks like [De Morgan's laws](http://en.wikipedia.org/wiki/De_Morgan%27s_laws).
+Back to your childchood, try to remembered your first steps. Methods with many lines of codes, programs base on one class, conditions almost looks like [De Morgan's laws](http://en.wikipedia.org/wiki/De_Morgan%27s_laws).
 
-    Doświadczenia kilku pokoleń programistów uczą że im mniej coś skomplikowane tym lepiej.  
+    We can learn from a few developers generations, that if somthing is less complicated than it is better.
 
 !SLIDE
    
-### Javascript jest prostym językiem:
+## Javascript is simple!
 
-* prosta struktura obiektu (na niem wzorowano _json_),
-* plastyczność - rozszerzalność,
-* luźne typowanie (duck typing),
-* lambda aka domknięcie aka _closur_,
-* brak klas,
-* tylko kilka typów wbudowanych.
+* ### simple object literal notation (_json_ is subset of it),
+* ### easy to form - easy to extend,
+* ### duck typing,
+* ### _closur_ aka block,
+* ### class free,
+* ### just few build in types - easy to learn.
 
 !SLIDE
 
-## Przykład prostego obiektu _jeż_
+## Simple object example.
     
-    var jez = {
-        waga: 100,
-        wiek: 7,
-        szybkosc: 10,
-        iloscJablekNaKolcach: 3,
-        oczy: piwne,
-        jedzTaKure: function() {},
-        dzgnijKolcem: function() {}
+    var pussInBoots = {
+        weight: 11,
+        speed: 10,
+        numberOfMouseKilled: 3,
+        danceSkillLeve: "low",
+        eye: "very dark",
+        drinkWine: function() {},
+        takeOffBoots: function() {}
         };
 
-## No dobra ale jak te dane czy zachowanie _uwspólnić_ na grupę obiektów?
+## Nice, but how can I create a group of objects.
 
 !SLIDE
 
-## Tak radzą sobie _"profesjonaliści"_!
+## This is how _"professionals"_ deal with it!
 
-### Klasy.
-Od wielu już lat poprzez takie języki jak C++, java, C# czy nawet Ruby głównym sposobem tworzenia kolejnych instancji obiektów są klasy. 
+### Class's World.
+From many years, through such a languages like C++, Java, C# and even Ruby, the base way to create new object instance is _Class_.  
 
-### Co dają nam klasy:
-* dają początek grupie obiektów,
-* miejsce na definiowania wspólnych cech grupy obiektów,
+### Common base class responsibility:
+* object creation,
+* place for common object behevior and data.
 
-### Co mogą ograniczać przy modelowaniu __domeny__:
-* źle rozumiany DRY może prowadzić do niewłaściwego dziedziczenia (klasa domenowa dziedziczy po narzędziowej),
-* mocne powiązania w relacji dziedziczenia klas często jest powodem naruszenia  
-[Liskov substitution principle](http://en.wikipedia.org/wiki/Liskov_substitution_principle),
-* _dodatkowa abstrakcja_
+### Common class problems especially in business logic layer:
+* bad understand DRY principle goes to wrong class inheritnace (domain class inherit from tools class)
+* strong inheritnace relationship can very easy violates [SRP](http://pragmaticcraftsman.com/2006/07/single-responsibility-principle/), [LSP](http://blog.objectmentor.com/articles/2008/09/06/the-liskov-substitution-principle-for-duck-typed-languages).
 
 !SLIDE
 
-## Naruszenie LSP i SRP.
+## Novice naive example.
+    We have a domain class Invoice. Invoice have a lot of fields like total price, tax, payment date and few behaviours.
+  
+    After some time our client request for pdf, html and csv invoice support. Some "guy" who may not understand very well DRY has found tool Printer which actually do all the work. He inherit Invoice from Printer. He think that this functionality comes for free. Everything works well, he is happy.
+ 
+### However, he violated a few bases rules and principles:
+* First of all he made dependency in his domain from much less important tool.
+* Violated SRP. Invoice now is effected by Printer class changes which can anforce Invoice to change with Printer.
 
-#### Przykład I
-    Ksiądz, normalnie dobry i uczciwy, niestety z czasem łasuch kościelnej tacy (złodziej). W rzeczywistości ten sam obiekt ma dwie odmienne funkcje. W kodzie nie łamiąc SRP było by nie możliwe stworzenie klasy która jest księdzem i złodziejem w jednym.  
+!SLIDE
+
+## Classic shapes example.
+  
+It is well know example with shapes. Like square and rectangle and area calculation. I think just everybody knows those examples if not [see this](http://www.google.com/url?sa=t&rct=j&q=violate%20liskov%20substitution%20principle%20squer%20rectangle&source=web&cd=1&ved=0CCQQFjAA&url=http%3A%2F%2Fwww.objectmentor.com%2Fresources%2Farticles%2Flsp.pdf&ei=8OGKT4PvOaOJ4gSa08mNCg&usg=AFQjCNFnNI0DmzofjWDQEGILAT-W1L8Mtw&cad=rja) or [read this](http://www.amazon.co.uk/Principles-Patterns-Practices-Robert-Martin/dp/0131857258/ref=pd_rhf_se_p_t_1).
+     
+    The idea behind "shapes examples" is that if you inherit and change base behaviours you can very easy violates contract between collaborator and his client. It is much more harder to see than violation from previous example because it can be see only in term of client. Not in isolation.
+
+### Its violates LSP because square is not rectangle in client of calculate rectangle area.
+
+!SLIDE
+
+## Still far away from the domain. 
+
+### The Good and the Bad example.
+    
+    Priest, particularly good and honest. He help poor people, give them food, cloths. He try to teach other how to live and not hurt anybody. However, when night comes, he become thief and still charities.  
    
-#### Przykład II
-    Z matematycznego punktu widzenia każdy kwadrat jest prostokątem, dlatego z punktu widzenia geometrii kwadrat jak najbardziej dziedziczy po prostokącie. Co się jednak stanie kiedy nadpiszemy w kwadracie długość i szerokość tak aby wskazywały na jedno pole (jedno ramie kwadratu) i będziemy chcieli policzyć pole?
+    In real World the same object (priest) can has many different behaviours "the good man" and "the bad man". In our code will be impossible to create class which contains behaviours for "the good" (priest) and the bad (thief) without violating SRP principle.
 
 !SLIDE
 
-## Naruszenie LSP cd.
-{{{
-def client_of_rectangle(rectangle)
-    rectangle.width = 5;
-    rectangle.height = 4;
-    raise "Bad area!" if rectangle.Area() != 20
-end
-client_of_rectangle(rectangle) \\ok
-client_of_rectangle(square) \\rais exeption
-}}}
-Kwadrat naruszył _"kontrakt"_ klasy prostokąt. Problem w tym że nie naruszył samego kwadrata.
+## Problem.
+* First of all class are not unique, the same violation of principles can be done with modules or functions. Maybe with classes it is much more easier maybe not.
 
->   The validity of a model can be expressed only in terms of its __clients__. 
+* The problem is that, OOP was create to close our code to domain. In this case in many languages classes have significant role. However, it seems to the same classes keep as still far away from domain.
+
+### Maybe it is time to look at object in different way? Besides OOP is about objects not necessary about classes. 
 
 !SLIDE 
 
