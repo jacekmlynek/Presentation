@@ -1,0 +1,22 @@
+raw
+Most popular an most unpipular world's language
+function first class function as constructo,
+javascript's lambdas - function closure scope
+prototype oriented inheritance .Create samplesc for prototype inheritance.
+
+The good parts javascript.
+
+Trzy zasadnicze aspekty zwiazane z prototype i uwspolnianiem kodu.
+    1. Tworzenie nowej instancji obiektu prototypowego (create method).
+    2. Tworszeni obikttu prototypowego.
+    3. Tworzenie obiektu prototypowego na bazie innego (dziedzicznei obiekt
+         po obiekcie).
+
+Jak zdefinowac prywatne zmienne instancyjne ? 
+
+The worest of Javascript:
+    1. new.
+    2. emulacja classy jako funckji.
+    3. this w scopeie.
+    4. easy to make global variables.
+    

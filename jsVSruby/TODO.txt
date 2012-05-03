@@ -1,0 +1,7 @@
+1. Check scope declaration in sirius helper by mzaj.
+3. Andres Narwath dci javsdcript
+4. Good parts java script - done
+5. javascript's lambdas  
+6. makery zwracaja obiekty czy funkcje? raczej funckcje - done.
+7. dlaczego for var in , nie dziala za fajnie z prototype? - done
+8. jak zrealizowac przekazanie parametrow do konstruktora uzywajac create.

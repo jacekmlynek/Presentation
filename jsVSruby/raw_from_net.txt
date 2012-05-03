@@ -1,0 +1,48 @@
+Most popular an most unpipular world's language
+function first class function as constructo,
+javascript's lambdas - function closure scope
+prototype oriented inheritance .Create samplesc for prototype inheritance.
+
+The goodV parts javascript.
+
+Objects:
+    Trzy zasadnicze aspekty zwiazane z prototype i uwspolnianiem kodu.
+        1. Tworzenie nowej instancji obiektu prototypowego (create method).
+        2. Tworszeni obikttu prototypowego.
+        3. Tworzenie obiektu prototypowego na bazie innego (dziedzicznei obiekt
+             po obiekcie).
+
+    Dziedziczenie za pomoca prototypu:
+    U podstaw lezy delegowanie.
+    A object contains linkt to another object (_proto_)
+
+    Tworzenie obiektu prototypowego za pomoca makerow. 
+    Makery to funkcja ktore zwracaja obiekt literalny z swoimy methodami.
+    Makery z malej litery bo nie ma new.
+    Przepis na makera ksiazka -> Inheritance -> Functional.
+
+    Jak extendowac, includowac:
+        - for prop in extedableObjec
+        - Object.defineProperties
+
+Funckcie to tez obiekty ktore maja swoje methody:
+    - applay(mapped-this, arrguments); wewnetrzny po zewnetrznym.
+    - scope, ktore tworza dziedzicza po sobie
+
+
+Jak zdefinowac prywatne zmienne instancyjne ?
+    - closure and maker function. 
+
+The worest of Javascript:
+    1. new.
+    2. emulacja classy jako funckji.
+        - dziedzicenie wyglada jak totalnie sztucznie.
+        - ciezko uzyskac dostep do super methods
+        - jesli zapomnimy o new to this nie zostanie zbindowane do nowego obiektu,
+            tylko do obiektu globalnego.
+        - ukrywaja prawdziwa nature jezyka.
+    3. this w scopeie.
+    4. easy to make global variables.
+
+Uwagi:
+Metoda "method" jest uzywana jako include rozszerza prototype.    

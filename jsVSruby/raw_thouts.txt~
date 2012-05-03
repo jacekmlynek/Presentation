@@ -1,0 +1,44 @@
+Stary dziadek czy mlodszy brat rubiego.
+
+Patterny
+Adapter, fabryka,  observer. Do pokazania podobienstw jak i roznic.
+
+Pass block of code
+
+
+Backgroud
+Wybieramy po cechach zewnetrznycj - szybkos uroda. Jako amatorxy nowych jezykow szukamy gotowej recepty, anizeli staramy zrozumiec sie jej sklad.
+
+Glowny cel:
+Pobudzic was do bycia arcjitektami wlasnych systemow , nie tylko bobem budowniczym, maliniakim okreslonej struktury. Zebyscue to wy wybierali w czym wam najlepiej a nie moda za was.
+
+Punkty.
+Prostota nie durnota. Potrzebuje tutaj takiego wstepu ze funkcka jest wszystkim.
+    - podstawowe typy,
+    - typeof, instanceof, constructor , operator ===.
+
+Closure czy prototupe? My mowimy oba. Moze jedno i drugie. Nie tylko rozmiar ma znaczenie.
+    Dolaczymy to wstepu. I potem w formie odpowiedzi na pytanie po rozdziale 1 i 2. albo przedstawic 2 rozdzialy i potem 
+    odpowiedziec na to pytanie , dodatkowo wskazujac jak na closure i prototype patrzec wlasciewie.
+
+Modulu dwie funkcje:
+    Modul=funkcja jako straznik graniczny.
+    Modul=funkcja jako implementacja interfejsu. Pierwsze miejsce w ktorym js jest jak powiew czegos nowego. Luzna implementaja nie zwiazana z dziedziczeniem, w rubym potrzeba czegos nowego, modul. Js poniewaz ma nie wiele ograniczen - jest bardzo prosty , ma juz taki modul to funkcja.
+Mixin wedlug js.
+    - prototype odwrocony singleton rubirgo.
+
+Domkniecie.Przekazanie i Wywolanie bloku. 
+Kontekst.
+A gdzie sa te klasy?
+    Klas nie ma sa konstuktory obiektow 
+    zmienne klasowe , statyczne.
+
+Zachowanie, foch , a za chwile niczego nie pamieta. Idealny jezyk dla dci.
+
+Najlepszym sposobem na nauke czego nowego jest odolanie sie do czegos znanego. Tak tez jest z porownaniem.W przypadku nowego jezyka najlepiej skorzystac z wiedz i doswiadczenia wielu juz lat programowania i siegnac po wzorce projektowe. Kiedy widzymy jak zrealizowac znany nam wzorzec wykorzystujac specyficzne cechy danego jezyka wtedy zaczynamy rozumiec jego istote.
+
+Closure:
+1. Bazuja na kopiach a nie referencjach do zmiennych lokalnych.
+2. Sa zbindowane do srodowiska w ktory zostaly zdefiniowane a nie uruchomione.
+3. Prosta i czysta notacja - decyduje o tym czy ich czesto uzywamy w prostych sytulacjach
+4. test test test
