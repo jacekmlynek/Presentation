@@ -69,7 +69,7 @@
 
 <h3 id="you-are-not-bored-when-you-start-learning-new-language-from-its-bases-types-loops-classes-">You are not bored, when you start learning new language from its bases (types, loops, classes …)?</h3>
 
-<p>Why you always start from the beginning? Why we learn something which is almost the same  in all languages?  </p>
+<p>Why you always start from theB beginning? Why we learn something which is almost the same  in all languages?  </p>
 
 <h3 id="the-best-way-to-get-better-with-something-is-learning-its-distinctive-features">The best way to get better with something is learning its distinctive features.</h3>
 
@@ -229,7 +229,7 @@ I will try convince you to “use” this simply language as a <em>“excuse”<
                         <!-- _S9SLIDE_  -->
 
 <h2 id="novice-naive-example">Novice naive example.</h2>
-<pre><code>We have a domain class Invoice. Invoice have a lot of fields like total price, tax, payment date and few behaviours.
+<pre><code>We have a domain class Invoice. Invoice have a lot of fields like total price, tax, payment date and few behaviors.
   
 After some time our client request for pdf, html and csv invoice support. Some "guy" who may not understand very well DRY has found tool Printer which actually do all the work. He inherit Invoice from Printer. He think that this functionality comes for free. Everything works well, he is happy.
 </code></pre>
@@ -294,11 +294,11 @@ In real World the same object (priest) can has many different behaviours "the go
                         <section class="slide" id="14">
                         <!-- _S9SLIDE_   -->
 
-<h2 id="ok-ale-czy-obiekt-moe-istnie-bez-klasy">Ok. Ale czy obiekt może istnieć bez klasy?</h2>
+<h2 id="question">Question.</h2>
 
-<h2 id="w-js-jak-najbardziej-wicej-nawet-jest-to-naturalniejsze-ni-prba-ich-modelowania">W js jak najbardziej. Więcej, nawet jest to naturalniejsze, niż próba ich modelowania.</h2>
+<h3 id="ok-but-object-without-class-it-is-really-possible">OK. But object without class? It is really possible?</h3>
 
-<h2 id="czy-to-w-jaki-sposb-pomoe">Czy to w jakiś sposób pomoże?</h2>
+<h3 id="if-it-is-even-true-can-it-help-in-some-way">If it is even true, can it help in some way?</h3>
 
 
                         </section>
@@ -306,19 +306,19 @@ In real World the same object (priest) can has many different behaviours "the go
                         <section class="slide" id="15">
                         <!-- _S9SLIDE_   -->
 
-<h2 id="js-zaczyna-nabiera-kolorw">Js zaczyna nabierać kolorów.</h2>
+<h2 id="go-back-to-nature">Go back to nature!</h2>
 
-<pre><code>Zapomnijmy na razie o tym co wiemy o tworzeniu obiektów. Wróćmy do tego na czym twórcy języków się wzorowali. Do przyrody.
+<pre><code>Forget for a moment about classes. Make one step back and try remembered on what OOP creators base on. Go back to the nature.     
 </code></pre>
 
 <hr />
 
-<pre><code>Czy w przyrodzie osobnik X powstaje z jakieś wydmuszki (klasa)?
+<pre><code>In nature one concrete specimen has been "created" by other concrete specimen. Not by some kind of "still life".
 </code></pre>
 
 <hr />
 
-<pre><code>Nie! Powstaje z innego w pełni „funkcjonalnego” osobnika.
+<pre><code>Dog, cat, capybara, fly, duck are "creating" by other dogs, cats, capybara, flies, ducks. Not by plastic dogs plush cats, jelly capybara, mechanical flies or steel ducks.
 </code></pre>
 
 
@@ -327,9 +327,11 @@ In real World the same object (priest) can has many different behaviours "the go
                         <section class="slide" id="16">
                         <!-- _S9SLIDE_  -->
 
-<h2 id="przykad-samochodu-jako-prototypu">Przykład <em>samochodu</em> jako prototypu.</h2>
+<h2 id="mycar-as-simple-prototype"><em>MyCar</em> as simple prototype.</h2>
 
 <p><img src="./img/TransparencyInheritanceV5.jpg" alt="Transparent Inheritance" title="Transparent Inheritance" /></p>
+
+<p>add link to examples</p>
 
 
                         </section>
@@ -337,7 +339,27 @@ In real World the same object (priest) can has many different behaviours "the go
                         <section class="slide" id="17">
                         <!-- _S9SLIDE_   -->
 
-<h2 id="przykad-samochodu---js">Przykład <em>samochodu</em> - js.</h2>
+<h2 id="idea-behind-prototype">Idea behind <em>prototype</em>.</h2>
+
+<h3 id="prototype-is-just-other-way-to-create-object-and-share-common-behaviour">Prototype is just other way to create object and share common behaviour.</h3>
+
+<h4 id="how-it-works">How it works?</h4>
+<p>It allowed us to create new objects base on other objects - like in nature. </p>
+
+<pre><code>I love my first car so much that I want my next cars (myRoadCar, myTruckCar, myRoadsterTruck) look almost the same like myCar.
+</code></pre>
+
+<h4 id="it-is-very-important-to-understand-transparent-inheritance">It is very important to understand transparent inheritance.</h4>
+<p>No matter if we create new instance or new group of objects it looks exactly the same.</p>
+
+<pre><code>MyRoadCar is like "next instance" of myCar, myTruckCar is full working truck but is also something more. It is base (parent) for myRoadsterTruck. 
+</code></pre>
+
+
+                        </section>
+                    
+                        <section class="slide" id="18">
+                        <!-- _S9SLIDE_  -->
 
 <pre class="code">
   var myOffRoadCar = Object.create(myCar);
@@ -381,29 +403,32 @@ In real World the same object (priest) can has many different behaviours "the go
 
                         </section>
                     
-                        <section class="slide" id="18">
+                        <section class="slide" id="19">
                         <!-- _S9SLIDE_   -->
 
-<h2 id="co-nam-to-wnosi">Co nam to wnosi?</h2>
+<h2 id="what-we-get">What we get?</h2>
+
 <ul>
   <li>
-    <h3 id="proste-tworzenie-obiektw-i-uwsplnianie-waciwoci">Proste tworzenie obiektów i uwspólnianie właściwości.</h3>
-    <p>Nie potrzebujemy dodatkowej abstrakcji jaką jest klasa.</p>
+    <h3 id="simplest-object-creation-and-code-sharing">Simplest object creation and code sharing.</h3>
+    <p>We don’t need anymore additional abstraction like class. All what we need is object and piece of code.</p>
   </li>
   <li>
-    <h3 id="przeroczyste-dziedziczenie">Przeźroczyste <em>“dziedziczenie”</em>.</h3>
-    <p>Czy tworzymy kolejny obiekt czy grupę obiektów jest to dla nas to samo - przeźroczyste.</p>
+    <h3 id="transparent-inheritance">Transparent <em>“inheritance”</em>.</h3>
+    <p>In the same way we can create “new instance” and new group of objects. </p>
   </li>
   <li>
-    <h3 id="uwsplniamy-kod-delegujc">Uwspólniamy kod delegując.</h3>
-    <p>Delegując automatycznie rozwiązuje nam problem z złym dziedziczeniem klasy domenowej po klasie narzędziowej. Brzmi znajomo?</p>
+    <h3 id="sharing-code-by-delegation-help-with-srp">Sharing code by delegation, help with SRP.</h3>
+    <p>One solution for wrong inheritance which violates SRP (Invoice and Printer example) can be <em>composition</em>. In javscript through <em>prototype</em> we get it for free. It is natural, easy and without any overhead. </p>
   </li>
 </ul>
+
+<h3 id="by-the-way-sharing-by-delegation-sounds-quit-familiar-doesnt-it">By the way, sharing by delegation sounds quit familiar, doesn’t it?</h3>
 
 
                         </section>
                     
-                        <section class="slide" id="19">
+                        <section class="slide" id="20">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="ladami-rubiego-w-javascript---mixinjs">Śladami rubiego w javascript - Mixin.js.</h2>
@@ -440,7 +465,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="20">
+                        <section class="slide" id="21">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="ladami-rubiego-w-javascript---mixinjs-1">Śladami rubiego w javascript - Mixin.js.</h2>
@@ -490,7 +515,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="21">
+                        <section class="slide" id="22">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="gdzie-jest-haczyk">Gdzie jest haczyk?</h2>
@@ -509,7 +534,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="22">
+                        <section class="slide" id="23">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="gadu-gadu-ale-jak-to-si-ma-do-srp-czy-lsp">Gadu gadu ale jak to się ma do SRP czy LSP?</h2>
@@ -525,7 +550,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="23">
+                        <section class="slide" id="24">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="warunkowa-zmiana-obiektw">Warunkowa zmiana obiektów.</h2>
@@ -542,7 +567,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="24">
+                        <section class="slide" id="25">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="podsumowanie">Podsumowanie.</h2>

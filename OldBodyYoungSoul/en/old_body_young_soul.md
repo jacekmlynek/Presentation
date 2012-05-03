@@ -8,7 +8,7 @@ author: Jacek Mlynek
 
 ### You are not bored, when you start learning new language from its bases (types, loops, classes ...)?
 
-Why you always start from the beginning? Why we learn something which is almost the same  in all languages?  
+Why you always start from theB beginning? Why we learn something which is almost the same  in all languages?  
 
 ### The best way to get better with something is learning its distinctive features.
 
@@ -114,7 +114,7 @@ From many years, through such a languages like C++, Java, C# and even Ruby, the 
 !SLIDE
 
 ## Novice naive example.
-    We have a domain class Invoice. Invoice have a lot of fields like total price, tax, payment date and few behaviours.
+    We have a domain class Invoice. Invoice have a lot of fields like total price, tax, payment date and few behaviors.
   
     After some time our client request for pdf, html and csv invoice support. Some "guy" who may not understand very well DRY has found tool Printer which actually do all the work. He inherit Invoice from Printer. He think that this functionality comes for free. Everything works well, he is happy.
  
@@ -153,36 +153,51 @@ It is well know example with shapes. Like square and rectangle and area calculat
 
 !SLIDE 
 
-## Ok. Ale czy obiekt może istnieć bez klasy?
+## Question.
 
-## W js jak najbardziej. Więcej, nawet jest to naturalniejsze, niż próba ich modelowania.
+### OK. But object without class? It is really possible?
 
-## Czy to w jakiś sposób pomoże?
+### If it is even true, can it help in some way? 
 
 !SLIDE 
 
-## Js zaczyna nabierać kolorów.
+## Go back to nature!
 
-    Zapomnijmy na razie o tym co wiemy o tworzeniu obiektów. Wróćmy do tego na czym twórcy języków się wzorowali. Do przyrody.
+    Forget for a moment about classes. Make one step back and try remembered on what OOP creators base on. Go back to the nature.     
 
 ***    
 
-    Czy w przyrodzie osobnik X powstaje z jakieś wydmuszki (klasa)?
+    In nature one concrete specimen has been "created" by other concrete specimen. Not by some kind of "still life".
 
 ***
 
-    Nie! Powstaje z innego w pełni „funkcjonalnego” osobnika.
-
+    Dog, cat, capybara, fly, duck are "creating" by other dogs, cats, capybara, flies, ducks. Not by plastic dogs plush cats, jelly capybara, mechanical flies or steel ducks.
 
 !SLIDE
 
-## Przykład _samochodu_ jako prototypu.
+## _MyCar_ as simple prototype.
 
 ![Transparent Inheritance](./img/TransparencyInheritanceV5.jpg "Transparent Inheritance")
 
+add link to examples
+
 !SLIDE 
 
-## Przykład _samochodu_ - js.
+## Idea behind _prototype_.
+
+### Prototype is just other way to create object and share common behaviour.
+  
+#### How it works? 
+It allowed us to create new objects base on other objects - like in nature. 
+
+    I love my first car so much that I want my next cars (myRoadCar, myTruckCar, myRoadsterTruck) look almost the same like myCar.
+
+#### It is very important to understand transparent inheritance. 
+No matter if we create new instance or new group of objects it looks exactly the same.
+    
+    MyRoadCar is like "next instance" of myCar, myTruckCar is full working truck but is also something more. It is base (parent) for myRoadsterTruck. 
+
+!SLIDE
 
 {{{
   var myOffRoadCar = Object.create(myCar);
@@ -225,15 +240,18 @@ It is well know example with shapes. Like square and rectangle and area calculat
 
 !SLIDE 
 
-## Co nam to wnosi?
-* ### Proste tworzenie obiektów i uwspólnianie właściwości.
-Nie potrzebujemy dodatkowej abstrakcji jaką jest klasa.
+## What we get?
 
-* ### Przeźroczyste _"dziedziczenie"_.
-Czy tworzymy kolejny obiekt czy grupę obiektów jest to dla nas to samo - przeźroczyste.
+* ### Simplest object creation and code sharing.
+We don't need anymore additional abstraction like class. All what we need is object and piece of code.
 
-* ### Uwspólniamy kod delegując.
-Delegując automatycznie rozwiązuje nam problem z złym dziedziczeniem klasy domenowej po klasie narzędziowej. Brzmi znajomo?
+* ### Transparent _"inheritance"_.
+In the same way we can create "new instance" and new group of objects. 
+
+* ### Sharing code by delegation, help with SRP.
+One solution for wrong inheritance which violates SRP (Invoice and Printer example) can be _composition_. In javscript through _prototype_ we get it for free. It is natural, easy and without any overhead. 
+
+### By the way, sharing by delegation sounds quit familiar, doesn't it?
 
 !SLIDE
 
