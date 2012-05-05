@@ -67,7 +67,7 @@
 
 <h2 id="ciekawostka---long-life-systems">Ciekawostka - long life systems.</h2>
 
-<pre><code>Czy wiecie że niektóre strony żyją dłużej niż pół roku?
+<pre><code>Czy wiecie że niektóre systemy żyją dłużej niż pół roku?
 </code></pre>
 
 
@@ -80,16 +80,16 @@
 
 <ul>
   <li>
-    <h3 id="od-7-lat-nieprzerwanie-na-prd">Od 7 lat nieprzerwanie na PRD,</h3>
+    <h3 id="od-5-lat-nieprzerwanie-na-prd">Od 5 lat nieprzerwanie na PRD,</h3>
   </li>
   <li>
-    <h3 id="podstawowy-booking-engin-dla-60-agencji-turystcznych">podstawowy booking engin dla 60 agencji turystcznych,</h3>
+    <h3 id="podstawowy-booking-engine-dla-60-agencji-turystcznych">podstawowy booking engine dla 60 agencji turystcznych,</h3>
   </li>
   <li>
-    <h3 id="lini-produkcyjnego-kodu-w-c">44,000 lini produkcyjnego kodu w <em>C#</em>,</h3>
+    <h3 id="linii-produkcyjnego-kodu-w-c">44,000 linii produkcyjnego kodu w <em>C#</em>,</h3>
   </li>
   <li>
-    <h3 id="lini-produkcyjnego-kodu-w-javascript">18,000 lini produkcyjnego kodu w <em>Javascript</em>,</h3>
+    <h3 id="linii-produkcyjnego-kodu-w-javascript">18,000 linii produkcyjnego kodu w <em>Javascript</em>,</h3>
   </li>
   <li>
     <h3 id="testow">1,200 testow,</h3>
@@ -98,7 +98,7 @@
     <h3 id="releasow">40 releasow,</h3>
   </li>
   <li>
-    <h3 id="integruje-okoo-4-wewntrzn-i-6-zewntrznych-podsystemw">integruje około 4 wewnętrzn i 6 zewnętrznych podsystemów.</h3>
+    <h3 id="integruje-okoo-4-wewntrznych-i-6-zewntrznych-podsystemw">integruje około 4 wewnętrznych i 6 zewnętrznych podsystemów.</h3>
   </li>
 </ul>
 
@@ -123,20 +123,38 @@
 <pre><code>Dobra architektura to nie tylko dobry projekt. Dobry projekt to dopiero początek o architekturze trzba myśleć cały czas.
 </code></pre>
 
-<hr />
-
-<pre><code>Dobry system można łatwo zepsuć.
-</code></pre>
-
-<hr />
-
-<pre><code>Słaby system można przywrócić do życia.
-</code></pre>
+<p><img src="./img/systematicly_work.jpg" alt="Systematic work" title="Systematic work" /></p>
 
 
                         </section>
                     
                         <section class="slide" id="6">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="architektura-ewoluuje-1">Architektura ewoluuje</h2>
+
+<pre><code>Dobry system można łatwo zepsuć.
+</code></pre>
+
+<p><img src="./img/SOLID_Jenga.jpg" alt="Jenga" title="Jenga" /></p>
+
+
+                        </section>
+                    
+                        <section class="slide" id="7">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="architektura-ewoluuje-2">Architektura ewoluuje</h2>
+
+<pre><code>Słaby system można przywrócić do życia.
+</code></pre>
+
+<p><img src="./img/correct_system.jpg" alt="Correct system" title="Correct system" /></p>
+
+
+                        </section>
+                    
+                        <section class="slide" id="8">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="co-zastalimy">Co zastaliśmy.</h2>
@@ -149,7 +167,7 @@
     <h4 id="brak-separacji-logiki-i-infrastruktury">brak separacji logiki i infrastruktury,</h4>
   </li>
   <li>
-    <h4 id="brak-wiadomego-zarzdzania-zalerznociami">brak świadomego zarządzania zalerznościami,</h4>
+    <h4 id="brak-wiadomego-zarzdzania-zalenociami">brak świadomego zarządzania zależnościami,</h4>
   </li>
   <li>
     <h4 id="dua-ilo-duplikacji-kodu">duża ilość duplikacji kodu,</h4>
@@ -166,12 +184,185 @@
 
                         </section>
                     
-                        <section class="slide" id="7">
+                        <section class="slide" id="9">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="co-nas-skonio-do-zmian">Co Nas skłoniło do zmian.</h2>
+
+<ul>
+  <li>
+    <h4 id="bardzo-niska-niezawodno-systemu">Bardzo niska niezawodność systemu.</h4>
+    <p>Issue list potrafiła osiągać kilkaset pozycji w miesiącu.</p>
+  </li>
+  <li>
+    <h4 id="bardzo-dlugo-trwajce-update-na-prd">Bardzo dlugo trwające update na PRD.</h4>
+    <p>Niekiedy nawet cały dzień :), bez powodzenia.    </p>
+  </li>
+  <li>
+    <h4 id="brak-jakichkolwiek-buildw">Brak jakichkolwiek buildów</h4>
+    <p>Systemu nikt nie potrafi uruchomić</p>
+  </li>
+  <li>
+    <h4 id="perspektywa-paru-lat-utrzymania">Perspektywa paru lat utrzymania.</h4>
+    <p>System przypominał maratończyka po maratonie kiedy ciągle miał sporo trasy przed sobą.</p>
+  </li>
+  <li>
+    <h4 id="potrzeba-ciglej-rozbudowy">Potrzeba ciąglej rozbudowy.</h4>
+    <p>Ciągle pojawiały się nowe requesty od klienta i nowi klienci.</p>
+  </li>
+</ul>
+
+
+                        </section>
+                    
+                        <section class="slide" id="10">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="pierwsze-kroki">Pierwsze kroki.</h2>
+
+<ul>
+  <li>
+    <h3 id="pierwsze-testy-jednostkowe">pierwsze testy jednostkowe,</h3>
+  </li>
+  <li>
+    <h3 id="sprztanie-nieuywanego-kodu">sprzątanie nieużywanego kodu,</h3>
+  </li>
+  <li>
+    <h3 id="eliminacja-duplikatw">eliminacja duplikatów,</h3>
+  </li>
+  <li>
+    <h3 id="grupowanie-powizanych-zagadnie">grupowanie powiązanych zagadnień,</h3>
+  </li>
+  <li>
+    <h3 id="wiadome-prby-izolacji-separacji">świadome próby izolacji, separacji,</h3>
+  </li>
+  <li>
+    <h3 id="pierwszy-konatak-z-istniejcymi-javscriptami">pierwszy konatak z istniejącymi javscript’ami.</h3>
+  </li>
+</ul>
+
+
+                        </section>
+                    
+                        <section class="slide" id="11">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="rzeczy-nabieraj-waciwych-ksztatw">Rzeczy nabierają właściwych kształtów.</h2>
+
+<p><img src="./img/system_puzzle.jpg" alt="System puzzle" title="System puzzle" /></p>
+
+
+                        </section>
+                    
+                        <section class="slide" id="12">
+                        <!-- _S9SLIDE_   -->
+
+<h2 id="composite-i-mvp-pattern-w-javascript">Composite i MVP pattern w Javascript.</h2>
+
+<p><img src="./img/js_modules.jpg" alt="Js modules" /></p>
+
+
+                        </section>
+                    
+                        <section class="slide" id="13">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="composite-i-mvp-pattern-w-javascript-1">Composite i MVP pattern w Javascript.</h2>
+
+<h3 id="kady-element-html-moe-by-czci-wikszej-cao---doskonay-przykad-na-composite-pattern">Każdy element HTML może być częścią większej całość - doskonały przykład na composite pattern.</h3>
+
+<h3 id="kady-element-peni-zarazem-odmienn-funkcj-a-jenocznie-zbudowany-jest-podobnych-czci">Każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:</h3>
+<ul>
+  <li>mamy część odpowiedzialną za HTML - View,</li>
+  <li>mamy część odpowiedzialną za dane - Model,</li>
+  <li>mamy część za logike UI - Presenter.
+Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li>
+</ul>
+
+<h3 id="kady-element-moe-istnie-niezalenie">Każdy element może istnieć niezależnie.</h3>
+
+
+                        </section>
+                    
+                        <section class="slide" id="14">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="loosly-coopling--dependency-injection">Loosly Coopling &amp; Dependency Injection</h2>
+<ul>
+  <li>testy jednostkowe mocno wyartykuowały odwieczną potrzebę systemu</li>
+  <li>centralny punkt zarządzania zeleżnościami - niekoniecznie framework DI</li>
+  <li>mocny nacisk na separowanie się od <em>zewnętrznych</em> komponentów</li>
+</ul>
+
+
+                        </section>
+                    
+                        <section class="slide" id="15">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="domain-driven-design">Domain Driven Design</h2>
+<ul>
+  <li>większy nacisk na domenę niż infrastrukturę</li>
+  <li>nie walczymy z rzeczywistością</li>
+  <li>system zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań </li>
+</ul>
+
+
+                        </section>
+                    
+                        <section class="slide" id="16">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="zaczyna-rysowa-si-architektura">Zaczyna rysować się architektura</h2>
+<ul>
+  <li>zastasowane wzorce i praktyki zaczęły formowac całościową architekturę systemu</li>
+  <li>dodatkowo w warstwie front-end pojawiają się kolejne czynniki
+    <ul>
+      <li>szybki rozwój i zmiany używanych bibliotek</li>
+      <li>globalna zmiana podejścia do javascriptów i wypracowywanie coraz lepszy wzorców</li>
+      <li>request od klientów</li>
+      <li>dotychczasowy model MVP robi się za mały - pojawiają się nowe warstwy</li>
+    </ul>
+  </li>
+</ul>
+
+
+                        </section>
+                    
+                        <section class="slide" id="17">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="gdzie-jestemy">Gdzie jesteśmy</h2>
+
+<p><img src="./img/onion_layers.jpg" alt="Generic onion" title="Generic onion" /></p>
+
+
+                        </section>
+                    
+                        <section class="slide" id="18">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="cebula-o-smaku-backendu">Cebula o smaku backendu.</h2>
 
 <p><img src="./img/BackendOnion.jpg" alt="Cebula beckend" title="Backend Onion" /></p>
+
+
+                        </section>
+                    
+                        <section class="slide" id="19">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="cebula-front-endowa">Cebula front-end’owa</h2>
+
+<p><img src="./img/frontend_onion.jpg" alt="Cebula front-end'owa" title="Cebula front-end'owa" /></p>
+
+
+                        </section>
+                    
+                        <section class="slide" id="20">
+                        <!-- _S9SLIDE_  -->
+
+<h2 id="bibliografia">Bibliografia</h2>
 
 
                         </section>
