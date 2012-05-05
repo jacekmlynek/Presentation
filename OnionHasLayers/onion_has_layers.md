@@ -138,7 +138,7 @@ Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.
 
 !SLIDE
 
-## Loosly Coopling & Dependency Injection
+## Loose Coopling & Dependency Injection
 * testy jednostkowe mocno wyartykuowały odwieczną potrzebę systemu
 * centralny punkt zarządzania zeleżnościami - niekoniecznie framework DI
 * mocny nacisk na separowanie się od _zewnętrznych_ komponentów
