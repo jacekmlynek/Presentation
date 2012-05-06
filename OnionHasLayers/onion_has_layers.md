@@ -77,10 +77,11 @@ author: Michał Zając, Jacek Młynek
 
 #### Jednym zdaniem:
     Kruchość + brak testów = katastrofa!
+% klasyczny legacy code
 
 !SLIDE
 
-## Co Nas skłoniło do zmian
+## Co nas skłoniło do zmian
 
 * #### Bardzo niska niezawodność systemu
 Issue list potrafiła osiągać kilkadziesiąt pozycji w miesiącu
@@ -100,7 +101,7 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 !SLIDE
 
 ## Pierwsze kroki
-
+% working with legacy code
 * #### pierwsze testy jednostkowe
 * #### sprzątanie nieużywanego kodu
 * #### eliminacja duplikatów
@@ -137,16 +138,19 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 !SLIDE
 
-## Loose Coopling & Dependency Injection
-* #### testy jednostkowe (TDD) mocno wyartykuowały odwieczną potrzebę systemu
+## Dependency Injection & Loose Coopling
+* #### testy jednostkowe (TDD) mocno wyartykułowały odwieczną potrzebę systemu
 * #### centralny punkt zarządzania zeleżnościami - niekoniecznie (ciężki) framework DI
 % wzmianka o złej prasie DI
+* #### stopnie włącznie nowych obszarów
 * #### mocny nacisk na separowanie się od _zewnętrznych_ komponentów
 
 !SLIDE
 
 ## Domain Driven Design
+* #### upside-down
 * #### większy nacisk na domenę niż infrastrukturę 
+* #### nie naginamy domeny problemu do używanej infrastruktury
 % ponownie izolacja
 * #### nie walczmy z rzeczywistością
 * #### system zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań
