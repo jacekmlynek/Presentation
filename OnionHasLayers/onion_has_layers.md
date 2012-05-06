@@ -11,7 +11,8 @@ author: Michał Zając, Jacek Młynek
 
     Czy wiecie, że niektóre systemy żyją dłużej niż pół roku?
 
-% obrazek?
+![Long life system](./img/long_life_system.jpg "Long life system")
+
 !SLIDE
 
 ## Nasza aplikacja
@@ -149,7 +150,7 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 !SLIDE
 
-## Co composite i MVP patterns nam wniosły
+## Co Nam to wniosło
    
 * #### podstawowy podział responsibility
 * #### możliwa indentyfikacja problemu bez parsera tekstu :)
