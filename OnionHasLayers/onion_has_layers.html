@@ -161,19 +161,19 @@
 
 <ul>
   <li>
-    <h4 id="najbliej-do-transaction-script-pattern">najbliżej do transaction script pattern,</h4>
+    <h3 id="najbliej-do-transaction-script-pattern">najbliżej do transaction script pattern,</h3>
   </li>
   <li>
-    <h4 id="brak-separacji-logiki-i-infrastruktury">brak separacji logiki i infrastruktury,</h4>
+    <h3 id="brak-separacji-logiki-i-infrastruktury">brak separacji logiki i infrastruktury,</h3>
   </li>
   <li>
-    <h4 id="brak-wiadomego-zarzdzania-zalenociami">brak świadomego zarządzania zależnościami,</h4>
+    <h3 id="brak-wiadomego-zarzdzania-zalenociami">brak świadomego zarządzania zależnościami,</h3>
   </li>
   <li>
-    <h4 id="dua-ilo-duplikacji-kodu">duża ilość duplikacji kodu,</h4>
+    <h3 id="dua-ilo-duplikacji-kodu">duża ilość duplikacji kodu,</h3>
   </li>
   <li>
-    <h4 id="javascript-ktrego-kady-si-ba-jeden-wielki-antypattern">javascript, którego każdy się bał (jeden wielki antypattern),</h4>
+    <h3 id="javascript-ktrego-kady-si-ba-jeden-wielki-antypattern">javascript, którego każdy się bał (jeden wielki antypattern),</h3>
   </li>
 </ul>
 
@@ -191,23 +191,23 @@
 
 <ul>
   <li>
-    <h4 id="bardzo-niska-niezawodno-systemu">Bardzo niska niezawodność systemu.</h4>
+    <h3 id="bardzo-niska-niezawodno-systemu">Bardzo niska niezawodność systemu.</h3>
     <p>Issue list potrafiła osiągać kilkaset pozycji w miesiącu.</p>
   </li>
   <li>
-    <h4 id="bardzo-dlugo-trwajce-update-na-prd">Bardzo dlugo trwające update na PRD.</h4>
+    <h3 id="bardzo-dlugo-trwajce-update-na-prd">Bardzo dlugo trwające update na PRD.</h3>
     <p>Niekiedy nawet cały dzień :), bez powodzenia.    </p>
   </li>
   <li>
-    <h4 id="brak-jakichkolwiek-buildw">Brak jakichkolwiek buildów</h4>
+    <h3 id="brak-jakichkolwiek-buildw">Brak jakichkolwiek buildów</h3>
     <p>Systemu nikt nie potrafi uruchomić</p>
   </li>
   <li>
-    <h4 id="perspektywa-paru-lat-utrzymania">Perspektywa paru lat utrzymania.</h4>
+    <h3 id="perspektywa-paru-lat-utrzymania">Perspektywa paru lat utrzymania.</h3>
     <p>System przypominał maratończyka po maratonie kiedy ciągle miał sporo trasy przed sobą.</p>
   </li>
   <li>
-    <h4 id="potrzeba-ciglej-rozbudowy">Potrzeba ciąglej rozbudowy.</h4>
+    <h3 id="potrzeba-ciglej-rozbudowy">Potrzeba ciąglej rozbudowy.</h3>
     <p>Ciągle pojawiały się nowe requesty od klienta i nowi klienci.</p>
   </li>
 </ul>
@@ -237,7 +237,7 @@
     <h3 id="wiadome-prby-izolacji-separacji">świadome próby izolacji, separacji,</h3>
   </li>
   <li>
-    <h3 id="pierwszy-konatak-z-istniejcymi-javscriptami">pierwszy konatak z istniejącymi javscript’ami.</h3>
+    <h3 id="pierwsze-prbowanie-si-z-istniejcymi-javscriptami">pierwsze próbowanie się z istniejącymi javscript’ami.</h3>
   </li>
 </ul>
 
@@ -258,33 +258,61 @@
                         <!-- _S9SLIDE_   -->
 
 <h2 id="composite-i-mvp-pattern-w-javascript">Composite i MVP pattern w Javascript.</h2>
+<!-- begin left {} -->
+<table width="100%"><tr><td width="50%" style="vertical-align: top;">
 
-<p><img src="./img/js_modules.jpg" alt="Js modules" /></p>
+      <p><img src="./img/js_modules.jpg" alt="Js modules" /></p>
+    </td>
+<!-- end left -->
+
+
+<!-- begin right {} -->
+<td width="50%" style="vertical-align: top;">
+
+      <!-- begin step {} -->
+      <div class="slide step">
+
+        <ul>
+          <li>Każdy element HTML może być częścią większej całość - doskonały przykład na <em>composite</em> pattern.</li>
+        </ul>
+
+      </div>
+      <!-- end step -->
+
+      <!-- begin step {} -->
+      <div class="slide step">
+
+        <ul>
+          <li>Każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:
+            <ul>
+              <li>mamy część odpowiedzialną za HTML - <em>View</em>,</li>
+              <li>mamy część odpowiedzialną za dane - <em>Model</em>,</li>
+              <li>mamy część za logike UI - <em>Presenter</em>.</li>
+              <li>Model nic nie wie o View i Presenterze.</li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+      <!-- end step -->
+
+      <!-- begin step {} -->
+      <div class="slide step">
+
+        <ul>
+          <li>Każdy element istnieje niezależnie.</li>
+        </ul>
+
+      </div>
+      <!-- end step -->
+
+    </td></tr></table>
+<!-- end right -->
 
 
                         </section>
                     
                         <section class="slide" id="13">
-                        <!-- _S9SLIDE_  -->
-
-<h2 id="composite-i-mvp-pattern-w-javascript-1">Composite i MVP pattern w Javascript.</h2>
-
-<h3 id="kady-element-html-moe-by-czci-wikszej-cao---doskonay-przykad-na-composite-pattern">Każdy element HTML może być częścią większej całość - doskonały przykład na composite pattern.</h3>
-
-<h3 id="kady-element-peni-zarazem-odmienn-funkcj-a-jenocznie-zbudowany-jest-podobnych-czci">Każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:</h3>
-<ul>
-  <li>mamy część odpowiedzialną za HTML - View,</li>
-  <li>mamy część odpowiedzialną za dane - Model,</li>
-  <li>mamy część za logike UI - Presenter.
-Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li>
-</ul>
-
-<h3 id="kady-element-moe-istnie-niezalenie">Każdy element może istnieć niezależnie.</h3>
-
-
-                        </section>
-                    
-                        <section class="slide" id="14">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="loosly-coopling--dependency-injection">Loosly Coopling &amp; Dependency Injection</h2>
@@ -297,7 +325,7 @@ Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li
 
                         </section>
                     
-                        <section class="slide" id="15">
+                        <section class="slide" id="14">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="domain-driven-design">Domain Driven Design</h2>
@@ -310,7 +338,7 @@ Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li
 
                         </section>
                     
-                        <section class="slide" id="16">
+                        <section class="slide" id="15">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="zaczyna-rysowa-si-architektura">Zaczyna rysować się architektura</h2>
@@ -329,7 +357,7 @@ Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li
 
                         </section>
                     
-                        <section class="slide" id="17">
+                        <section class="slide" id="16">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="gdzie-jestemy">Gdzie jesteśmy</h2>
@@ -339,7 +367,7 @@ Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li
 
                         </section>
                     
-                        <section class="slide" id="18">
+                        <section class="slide" id="17">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="cebula-o-smaku-backendu">Cebula o smaku backendu.</h2>
@@ -349,7 +377,7 @@ Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li
 
                         </section>
                     
-                        <section class="slide" id="19">
+                        <section class="slide" id="18">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="cebula-front-endowa">Cebula front-end’owa</h2>
@@ -359,7 +387,7 @@ Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.</li
 
                         </section>
                     
-                        <section class="slide" id="20">
+                        <section class="slide" id="19">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="bibliografia">Bibliografia</h2>

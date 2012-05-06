@@ -67,11 +67,11 @@ author: Michał Zając, Jacek Młynek
 
 ## Co zastaliśmy.
 
-* #### najbliżej do transaction script pattern,
-* #### brak separacji logiki i infrastruktury,
-* #### brak świadomego zarządzania zależnościami,
-* #### duża ilość duplikacji kodu,
-* #### javascript, którego każdy się bał (jeden wielki antypattern),
+* ### najbliżej do transaction script pattern,
+* ### brak separacji logiki i infrastruktury,
+* ### brak świadomego zarządzania zależnościami,
+* ### duża ilość duplikacji kodu,
+* ### javascript, którego każdy się bał (jeden wielki antypattern),
 
 ### Jednym zdaniem
     Kruchość + brak testów = katastrofa!
@@ -80,19 +80,19 @@ author: Michał Zając, Jacek Młynek
 
 ## Co Nas skłoniło do zmian.
 
-* #### Bardzo niska niezawodność systemu.
+* ### Bardzo niska niezawodność systemu.
 Issue list potrafiła osiągać kilkaset pozycji w miesiącu.
 
-* #### Bardzo dlugo trwające update na PRD.
+* ### Bardzo dlugo trwające update na PRD.
 Niekiedy nawet cały dzień :), bez powodzenia.    
 
-* #### Brak jakichkolwiek buildów
+* ### Brak jakichkolwiek buildów
 Systemu nikt nie potrafi uruchomić
 
-* #### Perspektywa paru lat utrzymania.
+* ### Perspektywa paru lat utrzymania.
 System przypominał maratończyka po maratonie kiedy ciągle miał sporo trasy przed sobą.
 
-* #### Potrzeba ciąglej rozbudowy.
+* ### Potrzeba ciąglej rozbudowy.
 Ciągle pojawiały się nowe requesty od klienta i nowi klienci.
 
 !SLIDE
@@ -105,7 +105,7 @@ Ciągle pojawiały się nowe requesty od klienta i nowi klienci.
 * ### grupowanie powiązanych zagadnień,
 * ### świadome próby izolacji, separacji,
 % jacekm
-* ### pierwszy konatak z istniejącymi javscript'ami.
+* ### pierwsze próbowanie się z istniejącymi javscript'ami.
 
 !SLIDE
 
@@ -116,29 +116,41 @@ Ciągle pojawiały się nowe requesty od klienta i nowi klienci.
 !SLIDE 
 
 ## Composite i MVP pattern w Javascript.
-
+<% left do %>
 ![Js modules](./img/js_modules.jpg)
+<% end %>
 
-!SLIDE
+<% right do %>
 
-## Composite i MVP pattern w Javascript.
+<% step do %>
 
-### Każdy element HTML może być częścią większej całość - doskonały przykład na composite pattern.
-  
-### Każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:
-* mamy część odpowiedzialną za HTML - View,
-* mamy część odpowiedzialną za dane - Model,
-* mamy część za logike UI - Presenter.
-Przyczym dość ważne jest aby że Model nic nie wiem o Presenterze i View.
-    
-  
-### Każdy element może istnieć niezależnie.
+* Każdy element HTML może być częścią większej całość - doskonały przykład na _composite_ pattern.
+
+<% end %>
+
+<% step do %>
+* Każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:
+    * mamy część odpowiedzialną za HTML - _View_,
+    * mamy część odpowiedzialną za dane - _Model_,
+    * mamy część za logike UI - _Presenter_.
+    * Model nic nie wie o View i Presenterze.
+
+<% end %>
+
+<% step do %> 
+
+* Każdy element istnieje niezależnie.
+
+<% end %>
+<% end %>
+
+% Dodać tutaj albo slajd albo wspominiec co to dalo.
 
 % mzaj
 
 !SLIDE
 
-## Loose Coopling & Dependency Injection
+## Loosly Coopling & Dependency Injection
 * testy jednostkowe mocno wyartykuowały odwieczną potrzebę systemu
 * centralny punkt zarządzania zeleżnościami - niekoniecznie framework DI
 * mocny nacisk na separowanie się od _zewnętrznych_ komponentów
