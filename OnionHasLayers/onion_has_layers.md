@@ -174,7 +174,7 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 * #### Większy nacisk na domenę niż infrastrukturę 
 * #### Nie naginamy domeny problemu do używanej infrastruktury
 % ponownie izolacja
-* #### Nie walczmy z rzeczywistością
+* #### Aplikacja stanowi opis domeny problemu
 * #### System zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań
 % maintainability vs. performance
 
