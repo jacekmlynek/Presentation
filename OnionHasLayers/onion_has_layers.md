@@ -147,7 +147,14 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 <% end %>
 <% end %>
 
-% Dodać tutaj albo slajd albo wspominiec co to dalo.
+!SLIDE
+
+## Co composite i MVP patterns nam wniosły
+   
+* #### podstawowy podział responsibility
+* #### możliwa indentyfikacja problemu bez parsera tekstu :)
+* #### reużywalność modułów
+* #### możliwość dodawanie kolejnych funkcjnalności bez ryzyka popsucia poprzednich.
 
 % mzaj
 
