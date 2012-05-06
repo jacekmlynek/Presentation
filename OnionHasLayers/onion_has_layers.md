@@ -17,12 +17,12 @@ author: Michał Zając, Jacek Młynek
 ## Nasza aplikacja
  
 * #### Od 5 lat nieprzerwanie na PRD
-* #### podstawowy booking engine dla 60 agencji turystycznych
+* #### Podstawowy booking engine dla 60 agencji turystycznych
 * #### 44,000 linii produkcyjnego kodu w _C#_
 * #### 18,000 linii produkcyjnego kodu w _Javascript_
 * #### 1,200 testów
 * #### 40 release'ów
-* #### integruje około 10 podsystemów
+* #### Integruje około 10 podsystemów
 
 % jacekm
 
@@ -68,12 +68,12 @@ author: Michał Zając, Jacek Młynek
 
 ## Co zastaliśmy
 
-* #### big ball of mud
-* #### najbliżej do Transaction Script
-* #### brak separacji logiki i infrastruktury
-* #### brak świadomego zarządzania zależnościami
-* #### bardzo duża duplikacja
-* #### javascript, którego każdy się bał (jeden wielki antypattern)
+* #### Big Ball of Mud
+* #### Najbliżej do Transaction Script
+* #### Brak separacji logiki i infrastruktury
+* #### Brak świadomego zarządzania zależnościami
+* #### Bardzo duża duplikacja
+* #### Javascript, którego każdy się bał (jeden wielki antypattern)
 
 #### Jednym zdaniem:
     Kruchość + brak testów = katastrofa!
@@ -102,13 +102,13 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 ## Pierwsze kroki
 % working with legacy code
-* #### pierwsze testy jednostkowe
-* #### sprzątanie nieużywanego kodu
-* #### eliminacja duplikatów
-* #### grupowanie powiązanych zagadnień
-* #### świadome próby izolacji
+* #### Pierwsze testy jednostkowe
+* #### Sprzątanie nieużywanego kodu
+* #### Eliminacja duplikatów
+* #### Grupowanie powiązanych zagadnień
+* #### Świadome kroki w kierunku izolacji
 % jacekm
-* #### pierwsze próbowanie się z istniejącymi javscript'ami.
+* #### Pierwsze próbowanie się z istniejącymi javscript'ami
 
 !SLIDE
 
@@ -133,9 +133,9 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 <% step do %>
 * Każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:
-    * mamy część odpowiedzialną za HTML - _View_,
-    * mamy część odpowiedzialną za dane - _Model_,
-    * mamy część za logike UI - _Presenter_.
+    * Mamy część odpowiedzialną za HTML - _View_,
+    * Mamy część odpowiedzialną za dane - _Model_,
+    * Mamy część za logike UI - _Presenter_.
     * Model nic nie wie o View i Presenterze.
 
 <% end %>
@@ -154,32 +154,32 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 !SLIDE
 
 ## Dependency Injection & Loose Coopling
-* #### testy jednostkowe (TDD) mocno wyartykułowały odwieczną potrzebę systemu
-* #### centralny punkt zarządzania zeleżnościami - niekoniecznie (ciężki) framework DI
+* #### Testy jednostkowe (TDD) mocno wyartykułowały odwieczną potrzebę systemu
+* #### Centralny punkt zarządzania zeleżnościami - niekoniecznie (ciężki) framework DI
 % wzmianka o złej prasie DI
-* #### stopnie włącznie nowych obszarów
-* #### mocny nacisk na separowanie się od _zewnętrznych_ komponentów
+* #### Stopnie włącznie nowych obszarów
+* #### Mocny nacisk na separowanie się od _zewnętrznych_ komponentów
 
 !SLIDE
 
 ## Domain Driven Design
-* #### upside-down
-* #### większy nacisk na domenę niż infrastrukturę 
-* #### nie naginamy domeny problemu do używanej infrastruktury
+* #### Upside-down
+* #### Większy nacisk na domenę niż infrastrukturę 
+* #### Nie naginamy domeny problemu do używanej infrastruktury
 % ponownie izolacja
-* #### nie walczmy z rzeczywistością
-* #### system zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań
+* #### Nie walczmy z rzeczywistością
+* #### System zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań
 % maintainability vs. performance
 
 !SLIDE
 
 ## Zaczyna rysować się architektura
-* #### zastasowane wzorce i praktyki zaczęły formowac całościową architekturę systemu
-* #### dodatkowo w warstwie front-end pojawiają się kolejne czynniki
-    * szybki rozwój i zmiany używanych bibliotek
-    * globalna zmiana podejścia do javascriptów i wypracowywanie coraz lepszy wzorców
-    * requesty od klientów
-    * dotychczasowy model MVP robi się za mały - pojawiają się nowe warstwy
+* #### Zastasowane wzorce i praktyki zaczęły formowac całościową architekturę systemu
+* #### Dodatkowo w warstwie front-end pojawiają się kolejne czynniki
+    * Szybki rozwój i zmiany używanych bibliotek
+    * Globalna zmiana podejścia do javascriptów i wypracowywanie coraz lepszy wzorców
+    * Requesty od klientów
+    * Dotychczasowy model MVP robi się za mały - pojawiają się nowe warstwy
 
 !SLIDE
 
