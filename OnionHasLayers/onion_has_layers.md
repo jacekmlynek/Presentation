@@ -17,7 +17,7 @@ author: Michał Zając, Jacek Młynek
 ## Nasza aplikacja
  
 * ### Od 5 lat nieprzerwanie na PRD
-* ### podstawowy booking engine dla 60 agencji turystcznych
+* ### podstawowy booking engine dla 60 agencji turystycznych
 * ### 44,000 linii produkcyjnego kodu w _C#_
 * ### 18,000 linii produkcyjnego kodu w _Javascript_
 * ### 1,200 testów
@@ -68,6 +68,7 @@ author: Michał Zając, Jacek Młynek
 
 ## Co zastaliśmy
 
+* #### big ball of mud 
 * #### najbliżej do Transaction Script
 * #### brak separacji logiki i infrastruktury
 * #### brak świadomego zarządzania zależnościami
@@ -100,13 +101,13 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 ## Pierwsze kroki
 
-* ### pierwsze testy jednostkowe
-* ### sprzątanie nieużywanego kodu
-* ### eliminacja duplikatów
-* ### grupowanie powiązanych zagadnień
-* ### świadome próby izolacji
+* #### pierwsze testy jednostkowe
+* #### sprzątanie nieużywanego kodu
+* #### eliminacja duplikatów
+* #### grupowanie powiązanych zagadnień
+* #### świadome próby izolacji
 % jacekm
-* ### pierwszy kontakt z istniejącymi javscript'ami
+* #### pierwszy kontakt z istniejącymi javscript'ami
 
 !SLIDE
 
@@ -124,38 +125,38 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 ## Composite i MVP pattern w Javascript
 
-* ### każdy element HTML może być częścią większej całości - doskonały przykład na Composite Pattern
-* ### każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:
+* #### każdy element HTML może być częścią większej całości - doskonały przykład na Composite Pattern
+* #### każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:
   * część odpowiedzialna za HTML - View
   * część odpowiedzialna za dane - Model
   * część odpowiedzialna za logike UI - Presenter
   * dość ważne jest aby by Model nic nie wiedział o Presenterze i View
-* ### każdy element może istnieć niezależnie
+* #### każdy element może istnieć niezależnie
 
 % mzaj
 
 !SLIDE
 
 ## Loose Coopling & Dependency Injection
-* ### testy jednostkowe (TDD) mocno wyartykuowały odwieczną potrzebę systemu
-* ### centralny punkt zarządzania zeleżnościami - niekoniecznie (ciężki) framework DI
+* #### testy jednostkowe (TDD) mocno wyartykuowały odwieczną potrzebę systemu
+* #### centralny punkt zarządzania zeleżnościami - niekoniecznie (ciężki) framework DI
 % wzmianka o złej prasie DI
-* ### mocny nacisk na separowanie się od _zewnętrznych_ komponentów
+* #### mocny nacisk na separowanie się od _zewnętrznych_ komponentów
 
 !SLIDE
 
 ## Domain Driven Design
-* ### większy nacisk na domenę niż infrastrukturę 
+* #### większy nacisk na domenę niż infrastrukturę 
 % ponownie izolacja
-* ### nie walczmy z rzeczywistością
-* ### system zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań
+* #### nie walczmy z rzeczywistością
+* #### system zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań
 % maintainability vs. performance
 
 !SLIDE
 
 ## Zaczyna rysować się architektura
-* ### zastasowane wzorce i praktyki zaczęły formowac całościową architekturę systemu
-* ### dodatkowo w warstwie front-end pojawiają się kolejne czynniki
+* #### zastasowane wzorce i praktyki zaczęły formowac całościową architekturę systemu
+* #### dodatkowo w warstwie front-end pojawiają się kolejne czynniki
     * szybki rozwój i zmiany używanych bibliotek
     * globalna zmiana podejścia do javascriptów i wypracowywanie coraz lepszy wzorców
     * requesty od klientów
@@ -184,6 +185,6 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 !SLIDE
 
 ## Bibliografia
-* ### Jimmy Nilsson. Applying Domain-Driven Design and Patterns: With Examples in C# and .NET
-* ### Robert C. Martin. Agile Principles, Patterns, and Practices in C#
-* ### http://jeffreypalermo.com/blog/the-onion-architecture-part-1/ 
+* #### Jimmy Nilsson. Applying Domain-Driven Design and Patterns: With Examples in C# and .NET
+* #### Robert C. Martin. Agile Principles, Patterns, and Practices in C#
+* #### http://jeffreypalermo.com/blog/the-onion-architecture-part-1/ 
