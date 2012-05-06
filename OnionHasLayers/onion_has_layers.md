@@ -148,7 +148,8 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 * ### większy nacisk na domenę niż infrastrukturę 
 % ponownie izolacja
 * ### nie walczmy z rzeczywistością
-* ### system zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań 
+* ### system zgodny z domeną łatwiej dostosowuje się do zmieniających wymagań
+% maintainability vs. performance
 
 !SLIDE
 
@@ -183,5 +184,6 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 !SLIDE
 
 ## Bibliografia
-
-
+* ### Jimmy Nilsson. Applying Domain-Driven Design and Patterns: With Examples in C# and .NET
+* ### Robert C. Martin. Agile Principles, Patterns, and Practices in C#
+* ### http://jeffreypalermo.com/blog/the-onion-architecture-part-1/ 
