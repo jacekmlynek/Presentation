@@ -16,13 +16,13 @@ author: Michał Zając, Jacek Młynek
 
 ## Nasza aplikacja
  
-* ### Od 5 lat nieprzerwanie na PRD
-* ### podstawowy booking engine dla 60 agencji turystycznych
-* ### 44,000 linii produkcyjnego kodu w _C#_
-* ### 18,000 linii produkcyjnego kodu w _Javascript_
-* ### 1,200 testów
-* ### 40 release'ów
-* ### integruje około 10 podsystemów
+* #### Od 5 lat nieprzerwanie na PRD
+* #### podstawowy booking engine dla 60 agencji turystycznych
+* #### 44,000 linii produkcyjnego kodu w _C#_
+* #### 18,000 linii produkcyjnego kodu w _Javascript_
+* #### 1,200 testów
+* #### 40 release'ów
+* #### integruje około 10 podsystemów
 
 % jacekm
 
@@ -68,7 +68,7 @@ author: Michał Zając, Jacek Młynek
 
 ## Co zastaliśmy
 
-* #### big ball of mud 
+* #### big ball of mud
 * #### najbliżej do Transaction Script
 * #### brak separacji logiki i infrastruktury
 * #### brak świadomego zarządzania zależnościami
