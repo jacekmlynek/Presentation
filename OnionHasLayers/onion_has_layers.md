@@ -1,4 +1,4 @@
-title: Onion has layers
+title: Cebula ma warstwy
 author: Michał Zając, Jacek Młynek
 
 % jacekm - wstęp
@@ -134,10 +134,10 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 <% step do %>
 * Każdy element pełni zarazem odmienną funkcję a jenoczśnie zbudowany jest podobnych części:
-    * Mamy część odpowiedzialną za HTML - _View_,
-    * Mamy część odpowiedzialną za dane - _Model_,
-    * Mamy część za logike UI - _Presenter_.
-    * Model nic nie wie o View i Presenterze.
+    * Mamy część odpowiedzialną za HTML - _View_
+    * Mamy część odpowiedzialną za dane - _Model_
+    * Mamy część za logike UI - _Presenter_
+    * Model nic nie wie o View i Presenterze
 
 <% end %>
 
@@ -150,7 +150,7 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 
 !SLIDE
 
-## Co Nam to wniosło
+## Co nam to wniosło
    
 * #### podstawowy podział responsibility
 * #### możliwa indentyfikacja problemu bez parsera tekstu :)
@@ -214,4 +214,6 @@ Ciągle pojawiały się nowe requesty od klienta oraz nowi klienci
 ## Bibliografia
 * #### Jimmy Nilsson. Applying Domain-Driven Design and Patterns: With Examples in C# and .NET
 * #### Robert C. Martin. Agile Principles, Patterns, and Practices in C#
-* #### http://jeffreypalermo.com/blog/the-onion-architecture-part-1/ 
+* #### http://jeffreypalermo.com/blog/the-onion-architecture-part-1/
+* #### http://martinfowler.com/eaaDev/uiArchs.html
+* #### http://www.slideshare.net/nzakas/scalable-javascript-application-architecture 
