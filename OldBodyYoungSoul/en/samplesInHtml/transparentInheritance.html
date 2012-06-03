@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+    <!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+        <!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+            <!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+                <head>
+                    <meta charset="utf-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+                    <title>Transparent Inheritance</title>
+
+                    <meta name="author" content="Jacek Mlynek">
+                    <meta name="viewport" content="width=1024, user-scalable=no">
+
+                    <!-- Core and extension CSS files -->
+                    <link rel="stylesheet" href="../core/deck.core.css">
+                    <link rel="stylesheet" href="../extensions/hash/deck.hash.css">
+                    <link rel="stylesheet" href="../extensions/codemirror/deck.codemirror.css">
+                    <link rel="stylesheet" href="../extensions/codemirror/themes/default.css">
+
+
+                    <!-- Theme CSS files (menu swaps these out) -->
+                    <link rel="stylesheet" id="transition-theme-link" href="../themes/transition/horizontal-slide.css">
+
+                    <!-- Custom CSS just for this page -->
+                    <!-- GB: changed fixed name to variable -->
+                    <link rel="stylesheet"  href="../old_body_young_soul.css">
+
+                    <script src="../lib/modernizr.custom.js"></script>
+                </head>
+
+                <body class="deck-container">
+                        <section class="slide" id="1">
+                        <!-- _S9SLIDE_  -->
+
+                <h4>After run see results below !</h4>
+<pre id="code" name="code" class="code" mode="javascript" runnable="true">
+(function(myCar){
+
+  var myOffRoadCar = Object.create(myCar);
+  myOffRoadCar.name = "My off road car, its not prototyp, it can be, but now its not nessesery";
+  myOffRoadCar.sound = "road hrrr szrr"; // should overide mycar sound.
+  myOffRoadCar.fireSecondWheelDrive = function(){
+    console.log("second wheel drive has been fired");
+  };
+
+  myOffRoadCar.startDrive(); //Should log raod hrrr szrr instand of brum
+
+  var myTruckCar = Object.create(myCar);
+
+  //Differances only
+  myTruckCar.name = "My track has become truck prototype ";
+  myTruckCar.sound = "hrrrrr plum";
+
+  myTruckCar.containerType = "long";
+  myTruckCar.cargoType = "wood";
+  myTruckCar.relaseCargo = function (){
+    console.log("cargo  has been relased");
+  };
+
+  myTruckCar.startDrive();
+  myTruckCar.relaseCargo();
+
+  // aguments params.
+  var myRoadsterTruck = Object.create(myTruckCar,{
+    name: {
+        value: "My beautiful truck", 
+        writable: true,
+        configurable: true,
+        enumerable: true},
+    containerType: {value: "short"}
+    });
+
+  myRoadsterTruck.startDrive(); // it has not have its own sound so shoud get from myTruckCar.
+
+  // It will be not needed i my shiny new truck :)
+  delete myRoadsterTruck.cargoType;
+  delete myRoadsterTruck.relaseCargo;
+
+  //myRoadsterTruck.relaseCargo(); //throw error;
+})( {
+      name: "My car which has became prototype for other my cars, but itself is ready to drive",
+      color: "white",
+      enginSound: function() {
+        return this.sound || "brummm";
+      },
+
+      startEngin: function(){
+        console.log("StartEngin");
+      },
+      shiftGear: function(){
+        console.log("Shift gear");
+      },
+      pressAccelerator: function(){
+        console.log("Press accelerator and brummm");
+      },
+      startDrive: function(){
+        console.log(this.name);
+        this.startEngin();
+        console.log(this.enginSound());
+        this.shiftGear();
+        this.pressAccelerator();
+      }
+  });
+</pre>
+
+
+</section>
+
+
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../lib/jquery-1.6.4.min.js"><\/script>')</script>
+
+    <!-- Deck Core and extensions -->
+    <script src="../core/deck.core.js"></script>
+    <script src="../extensions/hash/deck.hash.js"></script>
+    <script src="../extensions/codemirror/codemirror.js"></script>
+
+    <!-- include the code syntax you want to highlight -->
+    <!-- javascript -->
+    <script src="../extensions/codemirror/mode/javascript/javascript.js"></script>
+    <script src="../extensions/codemirror/mode/ruby/ruby.js"></script>
+
+    <!-- html mode : note code miror requires xml, css and javasript modes for html rendering -->
+    <script src="../extensions/codemirror/mode/xml/xml.js"></script>
+    <script src="../extensions/codemirror/mode/css/css.js"></script>
+    <script src="../extensions/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+    <script src="../extensions/codemirror/deck.codemirror.js"></script>
+
+    <!-- Specific to this page -->
+    <!-- GB: adding introduction.js inline -->
+    <script>
+        $(function() {
+            // Deck initialization
+            $.deck('.slide');
+
+            $('#style-themes').change(function() {
+                $('#style-theme-link').attr('href', $(this).val());
+            });
+
+            $('#transition-themes').change(function() {
+                $('#transition-theme-link').attr('href', $(this).val());
+            });
+        });
+
+
+    </script>
+
+</body>
+                </html>
