@@ -37,8 +37,8 @@
   myRoadsterTruck.startDrive(); // it has not have its own sound so shoud get from myTruckCar.
 
   // It will be not needed i my shiny new truck :)
-  myRoadsterTruck.cargoType = undefined;
-  myRoadsterTruck.relaseCargo = undefined;
+  delete myRoadsterTruck.cargoType;
+  delete myRoadsterTruck.relaseCargo;
   
   //myRoadsterTruck.relaseCargo(); //throw error;
 })( {

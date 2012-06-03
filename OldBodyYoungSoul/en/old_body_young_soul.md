@@ -199,6 +199,8 @@ No matter if we create new instance or new group of objects it looks exactly the
 
 !SLIDE
 
+## Transparent inheritnace.
+
 {{{
   var myOffRoadCar = Object.create(myCar);
     
@@ -234,8 +236,8 @@ No matter if we create new instance or new group of objects it looks exactly the
   myRoadsterTruck.startDrive(); // it has not have its own sound so shoud get from myTruckCar.
     
   // It will be not needed i my shiny new truck :)
-  myRoadsterTruck.cargoType = undefined;
-  myRoadsterTruck.relaseCargo = undefined; 
+  delete myRoadsterTruck.cargoType;
+  delete myRoadsterTruck.relaseCargo; 
   }}}
 
 !SLIDE 
@@ -255,8 +257,8 @@ One solution for wrong inheritance which violates SRP (Invoice and Printer examp
 
 !SLIDE
 
-## Śladami rubiego w javascript - Mixin.js.
-Przykład mixin w rubim:
+## Ruby footprints - Mixin.js.
+Ruby mixin example:
 
 {{{module Printable
   def print_to_pdf
@@ -288,98 +290,65 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
 !SLIDE
 
-## Śladami rubiego w javascript - Mixin.js. 
-Przykład zmiksowania w javscript:
+## Ruby footprints - Mixin.js. 
+Javscript mixin example:
 
-{{{var printable = {
-    printToPdf: {
-      value: function()
-      {
+{{{(function(){
+  var printable = {
+    printToPdf: function() {
         console.log("Text as pdf: " + this.details);
-      }
-    },
-    printToHtml: {
-      value: function()
-      {
+      },
+    printToHtml: function() {
         console.log("Text as html: " + this.details);
-      }
-    },
-    printToCsv: {
-      value: function(){
+      },
+    printToCsv: function() {
         console.log("Text as csv: " + this.details);
       }
-    }
   };
-  // Invoice maker like constructor but without "new".
+           
   var invoiceMaker = function()
   {
     var _details;
-    var _proto = {};
-    Object.defineProperties(_proto, printable);
-    var _that = Object.create(_proto);
-  
+    var _that = Object.create(printable);
+       
     _that.details = _details;
-    
+          
     return _that;
   };
-  
+   
   tvInvoice = invoiceMaker();
   tvInvoice.details = "tv invoice for march equal 120 pln";
   if(tvInvoice.printToCsv !== undefined) tvInvoice.printToCsv();
-   
+     
   mobileInvoice = invoiceMaker();
   mobileInvoice.details = "mobile invoice for april 89 pln";
   if(mobileInvoice.printToHtml !== undefined) mobileInvoice.printToHtml();
+})();
 }}}
 
 !SLIDE
 
-## Gdzie jest haczyk?
-Generalnie jeden kod i drugi robi to samo - deleguje pewne cechy do obiektów, do nowych instancji obiektów.
+## The devil is in details?
+Generally example in Ruby and Javascript do the same thing - delegate some behaviours to new instances.  
 
-### Nie liczy się co tylko jak - różnice.
-1. Skoro każdego klienta nie obchodzi _"skąd"_ tylko _"czy"_ to naprawdę potrzebny jest nam typ nadawany przez klasę?      
-2. Pomyślmy czy potrzebne jest nam też wyróżnienie abstrakcji - moduł? Czy nie lepiej dać domenie zrobić to za Nas? Czy _"prinatble"_ nie jest wystarczającą abstrakcją. W rubim raczej nie. Moduł jest potrzebny bo dodatkowo pokazuje że nie możemy utworzyć nowej instancji. W javascript nie! Tutaj nie ma dla nas znaczenie czy tworzymy nową instancje czy dajemy początek nowej rodzinie obiektów (klasycznie klasie).
+### Maybe "what" is not important. Maybe "how" is a key?
+1. If we have duck typing and our client doesn't care from who he get, but if or if not. So we really need class type?
+2. Module. Do we really need it to "augment" abstraction. In Ruby when we create object using class Module is necessary to place only abstraction. In Javascript we don't need it because it doesn't matter if we create new group of object or simple new instance. We do it in the same way. Besides we can use domain to augment abstraction. Simple name it Printable not Printer.    
 
-### Podążaj za domeną rasistowski przykład!
-    Piszemy system gdzie mamy jakiegoś Murzyna. Murzyn biega, skacze ... Za jakiś czas musimy dorobić Żółtka. Robi prawie to samo tylko woli ryż od bananów. Chcielibyśmy wydzielić to co ich łączy. Jeśli to co ich łączy ma swoją rolę w domenie wydzielmy to do czegoś co nazwiemy Human (klasa, obiekt). Jeśli nie ma roli w domenie po prostu zróbmy abstrakcje Humanable w js zwykły obiekt.
-
-!SLIDE
-
-## Gadu gadu ale jak to się ma do SRP czy LSP?
-
-### Dobra delegacja zamiast dziedziczenia lekarstwem na SRP.
-Mixin w rubim czy javscript wydaje się radzić super jeśli chodzi o zasady DRY czy SRP. Ponad to jest prosty i zgodny z naturą obu języków.
-
-### Niestety nie radzi sobie z "księdzem" i "kwadratem".
-Rozszerzenie klasy za pomocą mixin o ile zapobiegnie przypadkowy złego dziedziczenia po klasie narzędziowej o tyle nie poradzi sobie ze wspomnianymi przypadkami księdza czy kwadrata.
-
-### Czy możemy zatem jakoś w ogóle z tym sobie poradzić?
+### So if we can achieve the same goal, but much easier maybe Javascript is not so old?  
 
 !SLIDE
 
-## Warunkowa zmiana obiektów.
+## Recap.
 
-### Oddzielmy dane od zachowań.
+* Object Oriented Programing is about objects not classes.
+* Classes are not only way to create objects.
+* Classes inheritance can very easy break SRP and LSP.
+* Delegation seems to be the right solution for "wrong inheritance" and SRP problems.
+* In Ruby in Javascript delegation is natural and comes for free.
+* In Javascript is even easier because we don't need additional abstractions such a classes or modules.
+    
 
-### Rozszerzajmy obiekty warunkowo w runtime.
-
-    Czy to coś zmienia? Zasadniczo kodu w rutime (w pamięci programu) nie dotyczy SRP nie musimy go utrzymywać.
-Jeśli chcemy księdza mamy księdza jak chcemy złodzieje mamy złodzieja. To samo z kwadratem. Tutaj po prostu figura raz będzie prostokątem raz kwadratem.
+        After all Javascript like for old man seems to be very fresh. It also seems to be ideally language for domain driven maybe using DCI, who knows :). 
 
 
-### To wszystko prowadzi do DCI ale to już historia na następny raz.
-
-!SLIDE
-
-## Podsumowanie.
-
-### Javascript mimo swojego wieku wydaje się być całkiem rześkim dziadkiem.
-
-***
-
-### Może się czasami potknie (przekazywanie this, czy też operator new), nie mniej w niektórych momentach jest wstanie prześcignąć rubiego (brak klas, prostota).
-
-***
-
-### Wydaje się zatem idealnym językiem do modelowania domeny, do DCI.

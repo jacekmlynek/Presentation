@@ -1,30 +1,20 @@
 (function(){
-  var printerable = {
-    printToPdf: {
-      value: function()
-      {
+  var printable = {
+    printToPdf: function() {
         console.log("Text as pdf: " + this.details);
-      }
-    },
-    printToHtml: {
-      value: function()
-      {
+      },
+    printToHtml: function() {
         console.log("Text as html: " + this.details);
-      }
-    },
-    printToCsv: {
-      value: function(){
+      },
+    printToCsv: function() {
         console.log("Text as csv: " + this.details);
       }
-    }
   };
 
   var invoiceMaker = function()
   {
     var _details;
-    var _proto = {};
-    Object.defineProperties(_proto, printable);
-    var _that = Object.create(_proto);
+    var _that = Object.create(printable);
 
     _that.details = _details;
 
