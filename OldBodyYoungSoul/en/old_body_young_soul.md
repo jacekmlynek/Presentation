@@ -307,4 +307,13 @@ Generally example in Ruby and Javascript do the same thing - delegate some behav
 
         After all Javascript like for old man seems to be very fresh. It also seems to be ideally language for domain driven maybe using DCI, who knows :). 
 
+!SLIDE
 
+## Bibliography:
+* #### Douglas Crockford. JavaScript: The Good Parts,
+* #### Robert C. Martin. Agile Principles, Patterns, and Practices in C#,
+* #### James O. Coplien, Gertrud Bjørnvig. Lean Architecture: for Agile Software Development,
+* #### Jimmy Nilsson. Applying Domain-Driven Design and Patterns: With Examples in C# and .NET,
+* #### Russ Olsen. Design Patterns in Ruby.
+
+[For more code examples please visit my github](https://github.com/jacekmlynek/Presentation/tree/master/OldBodyYoungSoul/en/samples "My code examples").
