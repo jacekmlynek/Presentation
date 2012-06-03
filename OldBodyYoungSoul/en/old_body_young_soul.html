@@ -329,9 +329,8 @@ In real World the same object (priest) can has many different behaviours "the go
 
 <h2 id="mycar-as-simple-prototype"><em>MyCar</em> as simple prototype.</h2>
 
-<p><img src="./img/TransparencyInheritanceV5.jpg" alt="Transparent Inheritance" title="Transparent Inheritance" /></p>
-
-<p>add link to examples</p>
+<p><img src="./img/TransparencyInheritanceV5.jpg" alt="Transparent Inheritance" title="Transparent Inheritance" /><br />
+ <a href="./samplesInHtml/transparentInheritance.html" title="Transparent Inheritance"><strong>See code example</strong></a></p>
 
 
                         </section>
@@ -359,53 +358,6 @@ In real World the same object (priest) can has many different behaviours "the go
                         </section>
                     
                         <section class="slide" id="18">
-                        <!-- _S9SLIDE_  -->
-
-<h2 id="transparent-inheritnace">Transparent inheritnace.</h2>
-
-<pre class="code">
-  var myOffRoadCar = Object.create(myCar);
-    
-  myOffRoadCar.name = "My off road car, its not prototyp, it can be, but now not nessesery";
-  myOffRoadCar.sound = "road hrrr szrr"; // should overide mycar sound.
-  myOffRoadCar.fireSecondWheelDrive = function(){
-    console.log("second wheel drive has been fired");
-  };    
-  myOffRoadCar.startDrive(); //Should log raod hrrr szrr instand of brum
-  
-  var myTruckCar = Object.create(myCar);
-    
-  //Differances only
-  myTruckCar.name = "My track has become truck prototype ";
-  myTruckCar.sound = "hrrrrr plum";
-  myTruckCar.containerType = "long";
-  myTruckCar.cargoType = "wood";
-  myTruckCar.relaseCargo = function (){
-    console.log("cargo  has been relased");
-  };
-  myTruckCar.startDrive();
-  myTruckCar.relaseCargo();
-    
-  // aguments params.
-  var myRoadsterTruck = Object.create(myTruckCar,{
-    name: {
-        value: "My beautiful truck", 
-        writable: true,
-        configurable: true,
-        enumerable: true},
-    containerType: {value: "short"}
-    });
-  myRoadsterTruck.startDrive(); // it has not have its own sound so shoud get from myTruckCar.
-    
-  // It will be not needed i my shiny new truck :)
-  delete myRoadsterTruck.cargoType;
-  delete myRoadsterTruck.relaseCargo; 
-</pre>
-
-
-                        </section>
-                    
-                        <section class="slide" id="19">
                         <!-- _S9SLIDE_   -->
 
 <h2 id="what-we-get">What we get?</h2>
@@ -430,7 +382,7 @@ In real World the same object (priest) can has many different behaviours "the go
 
                         </section>
                     
-                        <section class="slide" id="20">
+                        <section class="slide" id="19">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="ruby-footprints---mixinjs">Ruby footprints - Mixin.js.</h2>
@@ -467,13 +419,13 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="21">
+                        <section class="slide" id="20">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="ruby-footprints---mixinjs-1">Ruby footprints - Mixin.js.</h2>
 <p>Javscript mixin example:</p>
 
-<pre class="code">(function(){
+<pre id="code" name="code" class="code" mode="javascript" runnable="true">(function(){
   var printable = {
     printToPdf: function() {
         console.log("Text as pdf: " + this.details);
@@ -509,7 +461,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="22">
+                        <section class="slide" id="21">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="the-devil-is-in-details">The devil is in details?</h2>
@@ -526,7 +478,7 @@ mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
 
                         </section>
                     
-                        <section class="slide" id="23">
+                        <section class="slide" id="22">
                         <!-- _S9SLIDE_  -->
 
 <h2 id="recap">Recap.</h2>

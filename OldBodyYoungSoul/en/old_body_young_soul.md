@@ -177,9 +177,8 @@ It is well know example with shapes. Like square and rectangle and area calculat
 
 ## _MyCar_ as simple prototype.
 
-![Transparent Inheritance](./img/TransparencyInheritanceV5.jpg "Transparent Inheritance")
-
-add link to examples
+![Transparent Inheritance](./img/TransparencyInheritanceV5.jpg "Transparent Inheritance")  
+ [__See code example__](./samplesInHtml/transparentInheritance.html "Transparent Inheritance")
 
 !SLIDE 
 
@@ -196,49 +195,6 @@ It allowed us to create new objects base on other objects - like in nature.
 No matter if we create new instance or new group of objects it looks exactly the same.
     
     MyRoadCar is like "next instance" of myCar, myTruckCar is full working truck but is also something more. It is base (parent) for myRoadsterTruck. 
-
-!SLIDE
-
-## Transparent inheritnace.
-
-{{{
-  var myOffRoadCar = Object.create(myCar);
-    
-  myOffRoadCar.name = "My off road car, its not prototyp, it can be, but now not nessesery";
-  myOffRoadCar.sound = "road hrrr szrr"; // should overide mycar sound.
-  myOffRoadCar.fireSecondWheelDrive = function(){
-    console.log("second wheel drive has been fired");
-  };    
-  myOffRoadCar.startDrive(); //Should log raod hrrr szrr instand of brum
-  
-  var myTruckCar = Object.create(myCar);
-    
-  //Differances only
-  myTruckCar.name = "My track has become truck prototype ";
-  myTruckCar.sound = "hrrrrr plum";
-  myTruckCar.containerType = "long";
-  myTruckCar.cargoType = "wood";
-  myTruckCar.relaseCargo = function (){
-    console.log("cargo  has been relased");
-  };
-  myTruckCar.startDrive();
-  myTruckCar.relaseCargo();
-    
-  // aguments params.
-  var myRoadsterTruck = Object.create(myTruckCar,{
-    name: {
-        value: "My beautiful truck", 
-        writable: true,
-        configurable: true,
-        enumerable: true},
-    containerType: {value: "short"}
-    });
-  myRoadsterTruck.startDrive(); // it has not have its own sound so shoud get from myTruckCar.
-    
-  // It will be not needed i my shiny new truck :)
-  delete myRoadsterTruck.cargoType;
-  delete myRoadsterTruck.relaseCargo; 
-  }}}
 
 !SLIDE 
 
