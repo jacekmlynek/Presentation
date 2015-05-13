@@ -1,0 +1,10 @@
+D:\Dev\source\Temp\ClientSideMess\ClientSideMess\bin\ClientSideMess.dll
+D:\Dev\source\Temp\ClientSideMess\ClientSideMess\bin\ClientSideMess.pdb
+D:\Dev\source\Temp\ClientSideMess\ClientSideMess\obj\Debug\ResolveAssemblyReference.cache
+D:\Dev\source\Temp\ClientSideMess\ClientSideMess\obj\Debug\ClientSideMess.dll
+D:\Dev\source\Temp\ClientSideMess\ClientSideMess\obj\Debug\ClientSideMess.pdb
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\ClientSideMess\bin\ClientSideMess.dll
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\ClientSideMess\bin\ClientSideMess.pdb
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\ClientSideMess\obj\Debug\ResolveAssemblyReference.cache
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\ClientSideMess\obj\Debug\ClientSideMess.dll
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\ClientSideMess\obj\Debug\ClientSideMess.pdb

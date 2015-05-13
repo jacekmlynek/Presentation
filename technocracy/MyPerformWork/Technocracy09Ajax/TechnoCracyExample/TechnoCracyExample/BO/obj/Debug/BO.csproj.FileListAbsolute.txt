@@ -1,0 +1,10 @@
+D:\DEV\source\TechnoCracyExample\BO\bin\Debug\BO.dll
+D:\DEV\source\TechnoCracyExample\BO\bin\Debug\BO.pdb
+D:\DEV\source\TechnoCracyExample\BO\obj\Debug\ResolveAssemblyReference.cache
+D:\DEV\source\TechnoCracyExample\BO\obj\Debug\BO.dll
+D:\DEV\source\TechnoCracyExample\BO\obj\Debug\BO.pdb
+J:\Technocracy\TechnoCracyExample\BO\bin\Debug\BO.dll
+J:\Technocracy\TechnoCracyExample\BO\bin\Debug\BO.pdb
+J:\Technocracy\TechnoCracyExample\BO\obj\Debug\ResolveAssemblyReference.cache
+J:\Technocracy\TechnoCracyExample\BO\obj\Debug\BO.dll
+J:\Technocracy\TechnoCracyExample\BO\obj\Debug\BO.pdb

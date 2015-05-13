@@ -1,0 +1,16 @@
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\bin\App_LocalResources\Airlines.xml
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\bin\TechnoCracyExample.dll
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\bin\TechnoCracyExample.pdb
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\bin\BO.dll
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\bin\BO.pdb
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\obj\Debug\ResolveAssemblyReference.cache
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\obj\Debug\TechnoCracyExample.dll
+D:\DEV\source\TechnoCracyExample\TechnoCracyExample\obj\Debug\TechnoCracyExample.pdb
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\bin\App_LocalResources\Airlines.xml
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\bin\TechnoCracyExample.dll
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\bin\TechnoCracyExample.pdb
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\bin\BO.dll
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\bin\BO.pdb
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\obj\Debug\ResolveAssemblyReference.cache
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\obj\Debug\TechnoCracyExample.dll
+J:\Technocracy\TechnoCracyExample\TechnoCracyExample\obj\Debug\TechnoCracyExample.pdb

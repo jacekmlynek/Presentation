@@ -1,0 +1,10 @@
+D:\Dev\source\Temp\ClientSideMess\MinificationAndBundling\bin\MinificationAndBundling.dll
+D:\Dev\source\Temp\ClientSideMess\MinificationAndBundling\bin\MinificationAndBundling.pdb
+D:\Dev\source\Temp\ClientSideMess\MinificationAndBundling\obj\Debug\ResolveAssemblyReference.cache
+D:\Dev\source\Temp\ClientSideMess\MinificationAndBundling\obj\Debug\MinificationAndBundling.dll
+D:\Dev\source\Temp\ClientSideMess\MinificationAndBundling\obj\Debug\MinificationAndBundling.pdb
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\MinificationAndBundling\bin\MinificationAndBundling.dll
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\MinificationAndBundling\bin\MinificationAndBundling.pdb
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\MinificationAndBundling\obj\Debug\ResolveAssemblyReference.cache
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\MinificationAndBundling\obj\Debug\MinificationAndBundling.dll
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\MinificationAndBundling\obj\Debug\MinificationAndBundling.pdb

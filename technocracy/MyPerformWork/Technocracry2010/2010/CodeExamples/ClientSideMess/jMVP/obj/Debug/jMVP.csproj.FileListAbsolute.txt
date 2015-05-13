@@ -1,0 +1,10 @@
+D:\Dev\source\Temp\ClientSideMess\jMVP\bin\jMVP.dll
+D:\Dev\source\Temp\ClientSideMess\jMVP\bin\jMVP.pdb
+D:\Dev\source\Temp\ClientSideMess\jMVP\obj\Debug\ResolveAssemblyReference.cache
+D:\Dev\source\Temp\ClientSideMess\jMVP\obj\Debug\jMVP.dll
+D:\Dev\source\Temp\ClientSideMess\jMVP\obj\Debug\jMVP.pdb
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\jMVP\bin\jMVP.dll
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\jMVP\bin\jMVP.pdb
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\jMVP\obj\Debug\ResolveAssemblyReference.cache
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\jMVP\obj\Debug\jMVP.dll
+D:\Mulimedia\MyData\Documents\MyPerformWork\Technocracry2010\2010\CodeExamples\ClientSideMess\jMVP\obj\Debug\jMVP.pdb

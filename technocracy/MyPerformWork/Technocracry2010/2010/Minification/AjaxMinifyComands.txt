@@ -1,0 +1,1 @@
+ajaxmin D:\MyDoc\PaperDoc\MyDoc\Technocracry\2010\Minification\start.js -hc –out D:\MyDoc\PaperDoc\MyDoc\Technocracry\2010\Minification\start.min.js –clobber
