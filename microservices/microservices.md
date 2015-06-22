@@ -5,13 +5,13 @@ author: Jacek Młynek
 
 ## Agenda
 
-* #### What is all about
+* #### What is it all about
 * #### Definition
-* #### How  good microservice should looks like
-* #### Benfits 
-* #### Common Pitfals
-* #### Deployemnt
-* #### Who alread invested in Microservices?
+* #### How does a good Microservice should look like
+* #### Benefits 
+* #### Common Pitfalls
+* #### Deployment
+* #### Who already invested in Microservices
 
 !SLIDE
 
@@ -33,7 +33,7 @@ author: Jacek Młynek
 
 !SLIDE
 
-## Evolution From Proceduar To Object Oriented
+## Evolution From Procedural To Object Oriented
 
 ![Procedular vs Objects](./img/cobal.jpg "Procedulars To Object Oriented")
 
@@ -55,7 +55,7 @@ author: Jacek Młynek
 % monolithic application hard to find out some stuff
 % when one assieblie not work
 
-## Evolution From Monolith Applicatio To ...
+## Evolution From Monolith Application To ...
 
 ![Evolution](./img/evolution_question_mark.jpg "Evolution")
 
@@ -64,7 +64,7 @@ author: Jacek Młynek
 # Maintainability - add a feature without breaking others
 % Separeate What Change Often From What Changes Rarely
 
-# How To Write High Maintainable Code?
+# How To Write Well Maintainable Code?
 
 # Modularity
 
@@ -72,11 +72,11 @@ author: Jacek Młynek
 
 ## Unix - The Most Modular System
 
-> This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface
+>This is the Unix philosophy: Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface
 >
 > ~ Douglas McIlroy
 
-# ls | grep "microserices"
+# ls | grep "microservices"
 
 !SLIDE
 
@@ -84,24 +84,24 @@ author: Jacek Młynek
 
 ![Evolution microservices](./img/mono_to_micro.jpg "Evolution Microservices")
 
-# Microservices are small autonomus services that work together.
+# Microservices are small autonomous services that work together.
 
-# How Microservice should looks like
+# How Does a Good Microservice should look like
 % think about add new title slide and split this point to new slides
 
 !SLIDE
 
 ## How Small is Micro
 
-    Someone from ThoughtWorks said that it should not be bigger that his head
+    Someone from ThoughtWorks said that it should not be bigger than his head
 
 .
 
-    Another claims that it should not have more than 1000 lines of code
+    Someone else claims that it should not have more than 1000 lines of code
 
 .
 
-    Thing about the team structure. If code is to big to maitenance by small team trying to split it can be good move.
+    Think about the team structure. If the code is too big to maintenance by a small team - splitting it can be a good move.
 
 .
 
@@ -109,22 +109,22 @@ author: Jacek Młynek
 
 !SLIDE
 
-## Autonomus In Context of Services
+## Autonomous In Context of Services
 
-* #### One microservices onto one machine althought machine is a trick word today.
-  * overhead
-  * easier to manage problems easier to distributed if we have infrastructure for that
-* #### All comunication between services via network:
-  * like in TDD let us desgin form inside to ouside
+* #### Change independently, deployed independently without affecting its clients
+* #### All communication between services via network:
+  * like in TDD let us design from inside to outside
   * enforce separation
-* #### Change independly, deployed independly without affectic its clinets
-* #### Public interface as API and all services comunicate with each others via thoes APIs 
+* #### One Microservice onto one machine although machine is a tricky word today.
+* #### Public interface as API and all services communicate with each other via these APIs 
+  * overhead
+  * easier to manage problems, easier to distribute especially with new tools
 
 # Benefits
 
-!SLIDE TODO 
+!SLIDE 
 
-## Chery pick deployemnt. 
+## Cherry pick deployment. 
 
     Deploying things that has changed instead of whole system, reduce a risk that we introduce new bugs to PROD.
 
@@ -133,10 +133,10 @@ author: Jacek Młynek
 ## Scaling
 % Moze jakis obrazek
 
-    Scaling smaller parts of whole system not just whole system. 
+    Scaling smaller parts of whole system not just a whole system. 
  
   
-    In most cases you dosen't need to have perfocmance constrains on whole system. Just some parts need more powerfull hardware.
+    In most cases you don't have to have performance constrains on the whole system. Just some parts need more powerfull hardware.
 
 !SLIDE
 
@@ -144,54 +144,54 @@ author: Jacek Młynek
 
 ### How many times you decide to change architecture behind your system?
 
-### How many times you decide to rewritte or refactor your codebase?
+### How many times you decide to rewrite or refactor your codebase?
 
-### If not often or not at all, you are propably aftraid of:
-* it will takes you ages
+### If rarely or not at all, you probably are afraid of:
+* it will take you ages
 * it takes a lot of money
-* it is too riski, can itroduce a lot of bugs
+* it is too risky, can introduce a lot of bugs
 
 .
  
-    Samll idepended head of controls takes it from you. Now you can change one part of you system or even completle rewritte without so much fear.
+    Small independent head of controls takes it from you. Now you can change one part of you system or even completely rewrite without so much fear.
 
 
 !SLIDE
 
 ## Power of flexibility
 
-    The same standarts are must have. Without it is hard to imagin any kind of communication. 
+    The same standards are mandatory. Without them is hard to imagine any kind of communication. 
 
 .
 
-    Differences is what make things special and powerful.
+    Difference is what makes things special and powerful.
 
 . 
 
-    Microservices communicate using well defined protocols and API as public interfaces. However because they are head of controls tehy can be write in any technology you want. This allow you to pick right tools for problem.
+    Microservices communicate using well defined protocols and APIs as public interfaces. However because they are head of controls they can be written in any technology you want. This allows you to pick the right tools for the problem.
  
 
 !SLIDE
 
 ## Improve team organization
 
-    When you have small code base, you can minimalize number of peopel working on them.
+    When you have small code base, you can minimize number of people working on it.
 
 .
 
-    Samller team are more productive
+    Smaller teams are more productive
 
 !SLIDE
 
 ## Reusability 
 
-    If you have clear API as public interface of your services and well know communication protocol, your internal parts can be much more easier to reause compering to big monolith system. 
+    If you have clear API as public interface of your services and well know communication protocol, your internal parts can be much easier to reuse comparing to big monolith systems. 
 
 .
 
-    Right now when IoT is big buzzing world you never now when your internals become public or when you eneble another chanel of distribution.
+    Right now when IoT is big buzzing word you never now when your internals become public or when you enable another channel of distribution.
 
-# Pitfalls be careful 
+# Pitfalls 
 
 # Slicing
 
@@ -199,64 +199,53 @@ author: Jacek Młynek
 
 ## Slicing - Problem Definitions
 
-% Add image with appliction data acces and db 
+    Slicing by technical boundary is horizontal. In many cases when you will change some thing in front you will have to change it also in back. One change means two services to be deployed
 
-    Slicing by technical boundary is horizontal. In many cases when you will change some thing in front you will have to change it also in back. One change two service to deployed
+
+![Tech Slicing](./img/tech_slicing.png "Tech Slicing")
 
 !SLIDE 
 
-## Slicing - Solution
+## Solution
 
 ### Bounded Context is King!
 
-> A Bounded Context is an explicit boundary within which a domain model exists. Inside the boundary all terms and phrases of the Ubiquitous Language have specific meaning, and the model reflects the Language with exactness.
+    A Bounded Context is an explicit boundary within which a domain model exists. Inside the boundary all terms and phrases of the Ubiquitous Language have specific meaning, and the model reflects the Language with exactness.
 
 ![Implementing DDD](./img/implementing_ddd.jpg "Implementing DDD")
 
-# Spiders 
-
 !SLIDE
 
-## Spiders - Problem definition 
+## Solution Domain Slices
 
-![Spiders problem](./img/spiders_problem.jpg "Spiders problem")
+![Domain slicing](./img/domain_slicing.png "Domain slicing")
 
-!SLIDE
-
-## Spliders - Solution
-
-    Split you spider so just your composition root will know all parts 
-
-
-# Communication Based on Shared. 
+# Communication Based on Shared Libraries. 
 
 !SLIDE
 
 ## Problem Definition
 
-### First is exposing your internal structure 
+### Exposing your internal structure 
 
-    It is risky because accross bounded context mining of model can change. Acccount in Ordering service is somthing diffrent that Account in User service.
+    It is risky because across bounded context the meaning of the model can change. Account in Ordering service is something different that Account in User service.
 
+### Communication based on serialized shared libraries
 
-### Second Set up communication base on serialized shared libraries
+    Imagine that you have changed version of your shared library. Will it break your service communication? Good example can be a WSDL-binding. 
 
-    Imagin that you have changed version of your shared library. It will broke your service communication? Good example can be a WSDL-binding. 
-.
- 
 !SLIDE
 
-## Solutions
+## Solution
 
 > Be conservative in what you do, be liberal in what you expect
 > 
 > Postel's law
 
-* #### Distinquish between external and internal representation
+* #### Distinguish between external and internal representation
 * #### Expose just minimum
 * #### Model interpretation should be internal aspect. 
 * #### Don't use WSDL use XPath
-
 
 # Shared Database
 
@@ -264,42 +253,57 @@ author: Jacek Młynek
 
 ## Problem
 
-    Two services are wrting and reading to the same table. Every time i change service A i can want to change DB. How i can know the impact on service B?
+    Two services are writing and reading to the same table. Every time you change service A you can want to change DB. How you will know the impact on service B?
 
-.
+!SLIDE
 
-    It is not easy definetly worth additional hours
+## Solution 
+
+    Each service should own its own data
+
+* ### Split db, create two schemas. It still can be the same db instance.
+
+* ### Hide db behind one of these services and make all db operations through it.
+
+* ### I found out CQRS pattern to be very helpful in this case.
+
+!SLIDE
+
+## Solution 
+
+### It is very painful problem, definitely worth exploring more!
 
 ![Refactoring your database](./img/refactoring_your_database.jpg "Refactoring your database")
 
-## Solutions 
-
-    Each service should owns its own data
-
-### Split db, create two scheams. It still can be the same db instance.
-### Hide db behind one of this servises and make all db operation throught it.
-### I found out CQRS pattern to be very helpful in this case.
-
 # Breaking changes
+
+!SLIDE
 
 ## Problem
 
-    No matter how much you try you can introduce Breaking Chance!
-    You should adopte some mechanisms which can at least warn you. 
+    No matter how much you try you can introduce Breaking Change!
+    You should adopt some mechanisms which can at least warn you. 
+
+!SLIDE
 
 ## Solution 
 
 ### Two thing which can be helpful:
+
 * #### Consumer Driven Contract
-* #### Distinguish between deploying thing and releasing it.
+* #### Distinguish between deployment and release.
+
+!SLIDE
 
 ## Solution - Consumer Driven Contract
 
-![Consumer driven contract](./img/consumer_driven_contract.jpg "Consumer driven contract")
+![Consumer driven contract](./img/consumer_driven_contract.png "Consumer driven contract")
 
-## Solution Deployment != Releasing
+!SLIDE
 
-![Release it](./img/relase_it.jpg "Release it")
+## Solution Deployment != Release
+
+![Release it](./img/release_it.jpg "Release it")
 
 # Performance Issue
 
@@ -307,20 +311,26 @@ author: Jacek Młynek
 
 ## Problem 
 
+    A lot of small services communicating via network will slow down your applications. The main problem is that you probably don't know how fast your application should be!
+
 !SLIDE
 
 ## Solution
+
+* ### Measure it! Monitoring, load tests are must have in MicroWorld
+* ### Because one "machine" contains one service you can easily locate source of your performance problems and solve the root cause.
 
 !SLIDE
 
 ## Recap What We Have Already Known
 
 * #### Microservice should be small
-* #### We know that bunded context is very useful in case of slicing choesion and lose couple services!
-* #### Microsevice should be deployed independly
+* #### Microservices should be cohesive and loosely coupled
+* #### Use bounded context to slice your services 
+* #### Microservice should be deployed independently
 * #### One microservice onto one machine
 
-# Continus Deployment Tools
+# Continuous Deployment Tools
 
 !SLIDE
 
@@ -337,7 +347,7 @@ author: Jacek Młynek
 
 <% right do %>
 
-## Virtualization
+## Vitalization
 
 * ### AWS
 * ### Vagrant
@@ -354,16 +364,16 @@ author: Jacek Młynek
 
 ## Benefits
 
-* ### Immutable servers - we store all configuratio in source controle
+* ### Immutable servers - we store all configuration in source control
 * ### Reproduce PROD
-* ### It give us power to handle failures.
+* ### It gives us the power to handle failures.
 * ### Fast machine start up.
 
 !SLIDE
 
 ## Drawbacks
 
-* ### Build images can take long time especially for the firs time
+* ### Build images can take long time especially for the first time
 * ### Some of the images can be large
 
 !SLIDE
