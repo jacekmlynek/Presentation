@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="TechnoCracyExample.AjaxWebServices.CalendarService" CodeBehind="CalendarService.svc.cs" %>

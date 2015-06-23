@@ -1,9 +1,0 @@
-** My test to html 
-
-*** Next chapter
-
-    List:
-        * ola
-        * zosia
-        * kasia 
-
