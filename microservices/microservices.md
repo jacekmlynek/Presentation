@@ -116,9 +116,9 @@ author: Jacek Młynek
   * like in TDD let us design from inside to outside
   * enforce separation
 * #### One Microservice onto one machine although machine is a tricky word today.
-* #### Public interface as API and all services communicate with each other via these APIs 
   * overhead
   * easier to manage problems, easier to distribute especially with new tools
+* #### Public interface as API and all services communicate with each other via these APIs 
 
 # Benefits
 
@@ -347,7 +347,7 @@ author: Jacek Młynek
 
 <% right do %>
 
-## Vitalization
+## Virtualization
 
 * ### AWS
 * ### Vagrant
