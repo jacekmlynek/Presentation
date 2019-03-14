@@ -241,8 +241,7 @@ tv_invoice.print_to_pdf if tv_invoice.respond_to? 'print_to_pdf'
    
 mobile_invoice = Invoice.new 
 mobile_invoice.details = "mobile invoice for april 89 pln"
-mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'
-}}}
+mobile_invoice.print_to_csv if mobile_invoice.respond_to? 'print_to_csv'}}}
 
 !SLIDE
 
